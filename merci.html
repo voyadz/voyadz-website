@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci ! — VoyaDZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F2347;
+  --royal:#1E40AF;
+  --sky:#0EA5E9;
+  --cloud:#FAFBFC;
+  --amber:#F59E0B;
+  --green:#15803D;
+  --sub:#64748B;
+  --border:#E2E8F0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--royal) 100%);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  color:#0F172A;
+}
+.success-card{
+  background:white;
+  border-radius:24px;
+  padding:50px 40px;
+  max-width:520px;
+  width:100%;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,0.3);
+}
+.success-icon{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:#F0FDF4;
+  border:3px solid #22C55E;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 24px;
+  font-size:42px;
+  animation:scaleIn 0.5s ease-out;
+}
+@keyframes scaleIn{
+  0%{transform:scale(0);}
+  60%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:14px;
+  line-height:1.2;
+}
+h1 em{font-style:italic;color:var(--sky);}
+.lead{
+  font-size:16px;
+  color:var(--sub);
+  line-height:1.7;
+  margin-bottom:30px;
+}
+.steps{
+  background:var(--cloud);
+  border-radius:14px;
+  padding:24px;
+  text-align:left;
+  margin-bottom:30px;
+  border:1px solid var(--border);
+}
+.steps-title{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--sky);
+  margin-bottom:14px;
+}
+.step{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:8px 0;
+}
+.step-num{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--navy);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:13px;
+  flex-shrink:0;
+}
+.step-text{
+  font-size:14px;
+  color:#0F172A;
+  line-height:1.5;
+  padding-top:3px;
+}
+.step-text strong{color:var(--navy);}
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.btn{
+  padding:14px 24px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:all .2s;
+}
+.btn-primary{
+  background:var(--navy);
+  color:white;
+}
+.btn-primary:hover{background:var(--royal);}
+.btn-wa{
+  background:#F0FDF4;
+  border:1.5px solid #22C55E;
+  color:var(--green);
+}
+.btn-wa:hover{background:#DCFCE7;}
+.brand{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+  font-size:12px;
+  color:var(--sub);
+  font-weight:600;
+}
+.brand strong{color:var(--navy);font-size:14px;font-weight:900;letter-spacing:-0.5px;}
+.brand strong span{color:var(--sky);}
+</style>
+</head>
+<body>
+
+<div class="success-card">
+  <div class="success-icon">✓</div>
+  <h1>Demande <em>bien reçue !</em></h1>
+  <p class="lead">Merci pour votre intérêt pour VoyaDZ. Notre équipe a bien reçu votre demande de réservation et va vous recontacter sous peu.</p>
+
+  <div class="steps">
+    <div class="steps-title">⏱️ Ce qui se passe maintenant</div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>Sous 24h</strong> — Un conseiller VoyaDZ vous appelle sur WhatsApp pour confirmer les détails de votre voyage.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>Programme personnalisé</strong> — Nous vous envoyons votre devis détaillé avec hôtels, vols et excursions.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>Validation et acompte</strong> — Une fois validé, l'acompte sécurise votre place. Pas de paiement en ligne.</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a href="index.html" class="btn btn-primary">← Retour à l'accueil</a>
+    <a href="https://wa.me/213XXXXXXXXX" class="btn btn-wa">💬 WhatsApp direct</a>
+  </div>
+
+  <div class="brand">
+    <strong>Voya<span>DZ</span></strong><br>
+    Voyages organisés depuis Alger 🇩🇿
+  </div>
+</div>
+
+</body>
+</html>
