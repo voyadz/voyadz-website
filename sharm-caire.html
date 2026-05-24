@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharm el-Sheikh + Le Caire Summer 2026 — VoyaDZ · 55 départs · Dès 223 000 DA</title>
+<meta name="description" content="Combiné Caire + Sharm el-Sheikh d'Algérie. Vol EgyptAir · 55 départs entre juillet et septembre · 15+ hôtels (4★ à 5★ Luxury) · All Inclusive · Pyramides · Mer Rouge. Dès 223 000 DA.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Bleu Profond Premium */
+  --navy:#0F2347;        /* Base · Navy profond */
+  --royal:#1E40AF;       /* Royal Blue */
+  --sky:#0EA5E9;         /* Sky Bright · Accent */
+  --sky-light:#E0F2FE;
+  --cloud:#FAFBFC;       /* Fond */
+  --amber:#F59E0B;       /* Premium accent */
+  --amber-light:#FEF3C7;
+  --ink:#0F172A;
+  --sub:#64748B;
+  --border:#E2E8F0;
+  --green:#15803D;
+  --red:#DC2626;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--cloud);color:var(--ink);line-height:1.6;font-size:15px;}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s;}
+.logo{font-family:'Inter',sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px;letter-spacing:-0.5px;}
+.logo-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--navy),var(--royal));display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:14px;letter-spacing:-1px;}
+.logo span{color:var(--sky);}
+.nav-r{display:flex;align-items:center;gap:24px;}
+.nav-link{font-size:14px;color:var(--sub);text-decoration:none;font-weight:500;transition:color .2s;}
+.nav-link:hover{color:var(--navy);}
+.btn-nav{padding:10px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;background:var(--navy);color:white;border:none;transition:all .2s;}
+.btn-nav:hover{background:var(--royal);transform:translateY(-1px);}
+
+/* === BREADCRUMB === */
+.breadcrumb{padding:88px 64px 0;background:var(--cloud);}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;font-size:13px;color:var(--sub);padding-bottom:20px;}
+.breadcrumb a{color:var(--sub);text-decoration:none;}
+.breadcrumb a:hover{color:var(--sky);}
+.breadcrumb .sep{margin:0 8px;color:var(--border);}
+
+/* === HERO === */
+.hero{position:relative;height:80vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-img{position:absolute;inset:0;background:url('images/sharm-hero.jpg') center/cover no-repeat,linear-gradient(135deg,#F59E0B,#0EA5E9);}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,71,0.2) 0%,rgba(15,35,71,0.4) 50%,rgba(15,35,71,0.95) 100%);}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 64px 56px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:flex-end;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.95);padding:7px 16px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin-bottom:20px;}
+.hero-title{font-family:'Inter',sans-serif;font-size:clamp(48px,8vw,96px);font-weight:900;line-height:0.95;color:white;margin-bottom:14px;letter-spacing:-3px;}
+.hero-title em{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:clamp(28px,4.5vw,52px);color:rgba(255,255,255,0.9);margin-top:6px;letter-spacing:0;}
+.hero-meta{display:flex;align-items:center;gap:18px;font-size:14px;color:rgba(255,255,255,0.8);font-weight:500;flex-wrap:wrap;}
+.hm-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.4);}
+
+/* Hero card prix */
+.hero-right{background:white;border-radius:18px;padding:28px 24px;min-width:300px;box-shadow:0 24px 70px rgba(0,0,0,0.25);}
+.hr-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sub);margin-bottom:6px;}
+.hr-price{font-family:'Inter',sans-serif;font-size:46px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:4px;letter-spacing:-2px;}
+.hr-da{font-size:16px;color:var(--sub);font-weight:600;}
+.hr-promo{font-size:12px;font-weight:700;color:var(--green);background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:8px 12px;margin:12px 0 16px;display:flex;align-items:center;gap:6px;}
+.hr-btn{width:100%;padding:14px;border-radius:10px;background:var(--navy);color:white;border:none;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:10px;transition:all .2s;}
+.hr-btn:hover{background:var(--royal);}
+.hr-wa{width:100%;padding:12px;border-radius:10px;background:#F0FDF4;border:1.5px solid #22C55E;color:#15803D;font-family:inherit;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:all .2s;}
+.hr-wa:hover{background:#DCFCE7;}
+.hr-note{text-align:center;font-size:11px;color:var(--sub);margin-top:10px;}
+
+/* === DATES STRIP === */
+.dates-strip{background:var(--navy);padding:22px 64px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
+.ds-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);white-space:nowrap;}
+.ds-dates{display:flex;gap:10px;flex:1;flex-wrap:wrap;}
+.ds-date{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:10px 16px;cursor:pointer;transition:all .2s;}
+.ds-date:hover,.ds-date.active{background:var(--sky);border-color:var(--sky);}
+.ds-date.promo{border:1px solid var(--amber);}
+.ds-date.promo:hover,.ds-date.promo.active{background:var(--amber);border-color:var(--amber);}
+.ds-date.promo.active .ds-day,.ds-date.promo.active .ds-month,.ds-date.promo.active .ds-year{color:var(--navy);}
+.ds-month{font-size:10px;color:rgba(255,255,255,0.6);font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.ds-day{font-family:'Inter',sans-serif;font-size:22px;font-weight:800;color:white;line-height:1;letter-spacing:-1px;}
+.ds-year{font-size:10px;color:rgba(255,255,255,0.4);}
+.ds-promo-tag{position:absolute;top:-8px;right:-8px;background:var(--amber);color:var(--navy);font-size:9px;font-weight:800;padding:2px 6px;border-radius:8px;letter-spacing:0.5px;}
+.ds-date.promo{position:relative;}
+.ds-places{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.7);white-space:nowrap;}
+.ds-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
+
+/* === INCLUDES PILLS === */
+.includes{background:white;border-bottom:1px solid var(--border);padding:18px 64px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.inc-pill{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--ink);background:var(--cloud);border:1px solid var(--border);border-radius:40px;padding:7px 14px;}
+.inc-pill span{color:var(--sub);}
+.inc-pill.feature{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border-color:var(--amber);}
+.inc-pill.feature span{color:#92400E;}
+
+/* === SECTIONS === */
+section{padding:80px 64px;}
+.container{max-width:1100px;margin:0 auto;}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:14px;}
+.sec-label::before{content:'';width:24px;height:2px;background:var(--sky);}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--navy);}
+.sec-h em{font-style:italic;color:var(--sky);}
+.sec-sub{font-size:16px;color:var(--sub);max-width:560px;line-height:1.7;margin-bottom:48px;}
+
+/* === DOHA HIGHLIGHT BOX === */
+.doha-highlight{background:linear-gradient(135deg,var(--navy),var(--royal));border-radius:20px;padding:36px 40px;color:white;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;margin-bottom:60px;position:relative;overflow:hidden;}
+.doha-highlight::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,0.3),transparent 70%);}
+.doha-icon{font-size:48px;position:relative;z-index:2;}
+.doha-text{position:relative;z-index:2;}
+.doha-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+.doha-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:8px;line-height:1.2;}
+.doha-name em{font-style:italic;color:var(--amber);}
+.doha-desc{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;}
+.doha-badge{position:relative;z-index:2;background:var(--amber);color:var(--navy);font-size:11px;font-weight:800;padding:8px 14px;border-radius:8px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
+
+/* === CIRCUIT === */
+.circuit-section{background:white;}
+.stop{display:grid;grid-template-columns:80px 1fr;border-bottom:1px solid #F0EDE6;}
+.stop:last-child{border-bottom:none;}
+.stop-left{padding:32px 0;display:flex;flex-direction:column;align-items:center;border-right:2px solid var(--border);}
+.stop-num{width:38px;height:38px;border-radius:50%;background:var(--navy);color:white;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+.stop-num.highlight{background:var(--amber);color:var(--navy);}
+.stop-nights{font-size:10px;font-weight:800;color:var(--sub);text-transform:uppercase;letter-spacing:1px;margin-top:8px;text-align:center;line-height:1.3;}
+.stop-right{display:grid;grid-template-columns:240px 1fr;}
+.stop-img{height:200px;background-size:cover;background-position:center;position:relative;}
+.stop-info{padding:26px 28px;}
+.stop-city{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:6px;}
+.stop-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.stop-desc{font-size:14px;color:var(--sub);line-height:1.65;margin-bottom:14px;}
+.stop-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.stag{font-size:11px;font-weight:600;color:var(--ink);background:var(--cloud);border:1px solid var(--border);border-radius:6px;padding:4px 10px;}
+.stop-badge{position:absolute;bottom:12px;left:12px;background:white;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:800;color:var(--navy);}
+.stop-badge.featured{background:var(--amber);color:var(--navy);}
+
+.si-hcm{background:url('images/caire-pyramides.jpg') center/cover no-repeat,linear-gradient(135deg,#D97706,#92400E);}
+.si-danang{background:url('images/sharm-plage.jpg') center/cover no-repeat,linear-gradient(135deg,#06B6D4,#0E7490);}
+.si-hanoi{background:url('images/hanoi.jpg') center/cover no-repeat,linear-gradient(135deg,#7F1D1D,#450A0A);}
+.si-ninh{background:url('images/ninh.jpg') center/cover no-repeat,linear-gradient(135deg,#15803D,#14532D);}
+.si-halong{background:url('images/halong.jpg') center/cover no-repeat,linear-gradient(135deg,#075985,#082F49);}
+
+/* === HOTELS === */
+.hotels-section{background:var(--cloud);}
+.hotels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.hotel{background:white;border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:all .3s;}
+.hotel:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,35,71,0.12);}
+.hotel-img{height:180px;background-size:cover;background-position:center;position:relative;}
+.hotel-img.h1{background:url('images/sharm-economique.jpg') center/cover no-repeat,linear-gradient(135deg,#84CC16,#365314);}
+.hotel-img.h2{background:url('images/sharm-standard.jpg') center/cover no-repeat,linear-gradient(135deg,#3B82F6,#1E3A8A);}
+.hotel-img.h3{background:url('images/sharm-confort.jpg') center/cover no-repeat,linear-gradient(135deg,#F59E0B,#92400E);}
+.hotel-img.h4{background:url('images/sharm-premium.jpg') center/cover no-repeat,linear-gradient(135deg,#7C3AED,#4C1D95);}
+.hotel-img.h5{background:url('images/sharm-luxury.jpg') center/cover no-repeat,linear-gradient(135deg,#DC2626,#7F1D1D);}
+.hotel-stars-badge{position:absolute;top:8px;right:8px;background:white;border-radius:6px;padding:4px 10px;font-size:11px;color:var(--amber);font-weight:800;letter-spacing:0.5px;}
+.hotel-special{position:absolute;top:8px;left:8px;background:var(--amber);color:var(--navy);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;}
+.hotel-body{padding:16px;}
+.hotel-city{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:4px;}
+.hotel-name{font-size:15px;font-weight:700;color:var(--navy);}
+.hotel-nights{font-size:12px;color:var(--sub);margin-top:4px;font-weight:500;}
+
+/* === TARIFS === */
+.tarifs-section{background:white;}
+.tarifs-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;}
+.tarifs-table{width:100%;min-width:820px;border-collapse:collapse;font-size:13px;}
+.tarifs-table thead{background:var(--navy);color:white;}
+.tarifs-table th{padding:14px 10px;text-align:center;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.tarifs-table th:first-child{text-align:left;}
+.tarifs-table td{padding:14px 10px;text-align:center;border-bottom:1px solid var(--border);}
+.tarifs-table td:first-child{text-align:left;font-weight:600;color:var(--navy);}
+.tarifs-table tr:last-child td{border-bottom:none;}
+.tarif-price{font-family:'Inter',sans-serif;font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-0.5px;}
+.tarifs-table tr.promo td{background:#FFFBEB;position:relative;}
+.tarifs-table tr.promo td:first-child{color:var(--amber);font-weight:800;}
+.tarif-promo-badge{display:inline-block;background:var(--amber);color:var(--navy);font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;margin-left:6px;letter-spacing:0.5px;}
+
+/* === PROGRAMME === */
+.programme-section{background:var(--cloud);}
+.prog-list{display:flex;flex-direction:column;gap:8px;}
+.prog-item{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .2s;}
+.prog-item:hover{border-color:var(--sky);}
+.prog-head{padding:16px 20px;cursor:pointer;display:flex;align-items:center;gap:14px;user-select:none;transition:background .2s;}
+.prog-head:hover{background:var(--cloud);}
+.prog-day{width:54px;height:54px;border-radius:10px;background:var(--navy);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;}
+.prog-day.special{background:var(--amber);color:var(--navy);}
+.prog-day-num{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;line-height:1;letter-spacing:-1px;}
+.prog-day-lbl{font-size:9px;letter-spacing:1px;text-transform:uppercase;opacity:0.7;font-weight:700;}
+.prog-title{flex:1;font-weight:700;color:var(--navy);font-size:15px;}
+.prog-city{font-size:12px;color:var(--sky);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+.prog-arrow{font-size:14px;color:var(--sub);transition:transform .3s;}
+.prog-item.open .prog-arrow{transform:rotate(180deg);}
+.prog-body{display:none;padding:0 20px 20px 88px;font-size:14px;color:var(--sub);line-height:1.7;}
+.prog-item.open .prog-body{display:block;}
+.prog-body ul{list-style:none;padding:0;margin:0;}
+.prog-body li{padding:4px 0;display:flex;align-items:flex-start;gap:8px;}
+.prog-body li::before{content:'•';color:var(--sky);flex-shrink:0;font-weight:700;}
+
+/* === FLIGHT === */
+.flight-section{background:white;border-top:1px solid var(--border);}
+.flight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.flight-card{background:var(--cloud);border:1px solid var(--border);border-radius:14px;padding:24px;transition:all .2s;}
+.flight-card.promo{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border-color:var(--amber);}
+.flight-card:hover{border-color:var(--sky);}
+.flight-date{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;}
+.flight-card.promo .flight-date{color:#92400E;}
+.flight-duration{font-size:11px;color:var(--green);font-weight:700;margin-bottom:14px;}
+.flight-promo-tag{display:inline-block;background:var(--amber);color:var(--navy);font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;margin-left:6px;letter-spacing:0.5px;text-transform:uppercase;}
+.flight-leg{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--border);font-size:13px;}
+.flight-leg:last-child{border-bottom:none;}
+.flight-num{font-family:monospace;font-weight:700;color:var(--navy);font-size:12px;background:white;padding:3px 8px;border-radius:4px;border:1px solid var(--border);}
+.flight-route{flex:1;color:var(--ink);font-weight:600;}
+.flight-time{font-size:11px;color:var(--sub);font-family:monospace;}
+
+/* === INCLUS === */
+.inclus-section{background:var(--cloud);}
+.inclus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.inc-card{padding:24px;border-radius:14px;background:white;border:1px solid var(--border);transition:all .2s;}
+.inc-card:hover{border-color:var(--sky);transform:translateY(-2px);}
+.inc-card.feature{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border-color:var(--amber);}
+.inc-icon{font-size:32px;margin-bottom:14px;display:block;}
+.inc-title{font-size:15px;font-weight:800;margin-bottom:6px;color:var(--navy);}
+.inc-desc{font-size:13px;color:var(--sub);line-height:1.6;}
+.inc-card.feature .inc-title{color:#92400E;}
+
+/* === FORM === */
+.form-section{background:white;border-top:1px solid var(--border);}
+.form-wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start;}
+.form-left h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:700;line-height:1.2;margin-bottom:14px;color:var(--navy);}
+.form-left h2 em{font-style:italic;color:var(--sky);}
+.form-left p{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:28px;}
+.urgency-box{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border:1px solid var(--amber);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;}
+.urg-title{font-size:13px;font-weight:800;color:#92400E;}
+.urg-sub{font-size:12px;color:#92400E;margin-top:2px;}
+.promise-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.promise-item{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink);}
+.promise-check{width:22px;height:22px;border-radius:50%;flex-shrink:0;background:#F0FDF4;border:1.5px solid #22C55E;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--green);font-weight:700;}
+.form-card{background:var(--cloud);border-radius:20px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(15,35,71,0.08);overflow:hidden;}
+.fc-top{background:var(--navy);padding:24px 28px;}
+.fc-top-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:4px;}
+.fc-top-sub{font-size:13px;color:rgba(255,255,255,0.65);}
+.fc-body{padding:28px;background:white;}
+.field{margin-bottom:16px;}
+.f-label{display:block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--sub);margin-bottom:6px;}
+.f-req{color:var(--red);}
+.f-input{width:100%;background:var(--cloud);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;transition:all .2s;appearance:none;}
+.f-input:focus{border-color:var(--sky);background:white;}
+.f-input::placeholder{color:#94A3B8;}
+.f-input option{background:white;}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.f-error{font-size:11px;color:var(--red);margin-top:4px;display:none;}
+.f-error.show{display:block;}
+.f-input.err{border-color:#FCA5A5;}
+.date-chips{display:flex;gap:8px;flex-wrap:wrap;}
+.dc{padding:9px 14px;border-radius:8px;background:var(--cloud);border:1.5px solid var(--border);font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;transition:all .2s;}
+.dc:hover{border-color:var(--navy);color:var(--navy);}
+.dc.sel{background:var(--navy);border-color:var(--navy);color:white;}
+.dc.promo-chip{border-color:var(--amber);}
+.dc.promo-chip.sel{background:var(--amber);border-color:var(--amber);color:var(--navy);}
+.btn-submit{width:100%;padding:16px;border-radius:10px;background:var(--navy);color:white;border:none;font-family:inherit;font-size:16px;font-weight:800;cursor:pointer;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s;}
+.btn-submit:hover{background:var(--royal);}
+.btn-submit:disabled{opacity:0.5;cursor:not-allowed;}
+.f-note{text-align:center;font-size:12px;color:var(--sub);margin-top:10px;}
+.success-box{display:none;text-align:center;padding:40px 20px;}
+.success-box.show{display:block;}
+.sb-icon{width:64px;height:64px;border-radius:50%;background:#F0FDF4;border:2px solid #22C55E;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 20px;}
+.sb-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:8px;color:var(--navy);}
+.sb-sub{font-size:14px;color:var(--sub);line-height:1.7;max-width:300px;margin:0 auto 20px;}
+.sb-wa{display:inline-flex;align-items:center;gap:8px;background:#F0FDF4;border:1.5px solid #22C55E;border-radius:8px;padding:12px 22px;font-size:14px;font-weight:700;color:var(--green);text-decoration:none;}
+.sb-ref{font-size:11px;color:var(--sub);margin-top:12px;font-family:monospace;}
+
+/* === STICKY BAR === */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:100;background:white;border-top:1px solid var(--border);padding:12px 48px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 -8px 32px rgba(15,35,71,0.1);}
+.sb-product{font-size:13px;color:var(--sub);margin-bottom:2px;}
+.sb-price{font-family:'Inter',sans-serif;font-size:26px;font-weight:800;color:var(--navy);display:flex;align-items:baseline;gap:8px;letter-spacing:-1px;}
+.sb-price span{font-size:13px;color:var(--sub);font-weight:500;}
+.sb-right{display:flex;gap:10px;align-items:center;}
+.sb-wa-btn{padding:11px 20px;border-radius:8px;background:#F0FDF4;border:1.5px solid #22C55E;color:var(--green);font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px;}
+.sb-main-btn{padding:12px 28px;border-radius:8px;background:var(--navy);color:white;font-size:14px;font-weight:800;border:none;text-decoration:none;transition:all .2s;}
+.sb-main-btn:hover{background:var(--royal);}
+
+/* === FOOTER === */
+footer{background:var(--navy);color:white;padding:40px 64px 80px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.f-logo{font-family:'Inter',sans-serif;font-size:20px;font-weight:900;color:white;letter-spacing:-0.5px;}
+.f-logo span{color:var(--sky);}
+footer p{font-size:13px;color:rgba(255,255,255,0.5);}
+footer a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;transition:color .2s;}
+footer a:hover{color:var(--sky);}
+
+/* === RESPONSIVE === */
+@media(max-width:1024px){
+  nav{padding:0 24px;}
+  .hero-content{padding:0 24px 48px;grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  section{padding:60px 24px;}
+  .breadcrumb,.dates-strip,.includes{padding-left:24px;padding-right:24px;}
+  .stop-right{grid-template-columns:1fr;}
+  .stop-img{height:200px;}
+  .hotels-grid{grid-template-columns:1fr;}
+  .flight-grid{grid-template-columns:1fr;}
+  .inclus-grid{grid-template-columns:1fr 1fr;}
+  .form-wrap{grid-template-columns:1fr;gap:40px;}
+  .sticky-bar{padding:10px 20px;}
+  footer{padding:32px 24px 80px;}
+  .nav-r .nav-link{display:none;}
+  .doha-highlight{grid-template-columns:1fr;text-align:center;padding:24px;}
+  .doha-icon{margin:0 auto;}
+}
+
+/* === MOBILE OPTIMISÉ (< 768px) === */
+@media(max-width:768px){
+  /* Hero plus compact : on voit la photo + un teaser du contenu en dessous */
+  .hero{height:55vh;min-height:380px;max-height:500px;}
+  .hero-content{padding:0 20px 32px;}
+  .hero-title{font-size:42px;letter-spacing:-1.5px;}
+  .hero-title em{font-size:24px;}
+  .hero-meta{font-size:12px;gap:12px;}
+  .hero-meta span{font-size:12px;}
+  .hero-badge{font-size:10px;padding:5px 12px;margin-bottom:12px;}
+
+  /* Breadcrumb plus compact */
+  .breadcrumb{padding:80px 20px 0;}
+  .breadcrumb-inner{padding-bottom:14px;font-size:12px;}
+
+  /* Dates strip horizontal scrollable */
+  .dates-strip{padding:16px 20px;gap:16px;flex-direction:column;align-items:flex-start;}
+  .ds-dates{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
+  .ds-date{flex-shrink:0;}
+
+  /* Includes pills sur une seule ligne défilable */
+  .includes{padding:14px 20px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;}
+  .inc-pill{flex-shrink:0;font-size:11px;padding:6px 12px;}
+
+  /* Sections plus aérées */
+  section{padding:48px 20px;}
+  .sec-h{font-size:28px;letter-spacing:-0.5px;}
+
+  /* Doha box compact */
+  .doha-highlight{padding:20px;gap:14px;}
+  .doha-icon{font-size:36px;}
+  .doha-name{font-size:20px;}
+  .doha-desc{font-size:13px;}
+
+  /* Circuit stops compact */
+  .stop{grid-template-columns:60px 1fr;}
+  .stop-left{padding:20px 0;}
+  .stop-num{width:32px;height:32px;font-size:12px;}
+  .stop-img{height:160px;}
+  .stop-info{padding:18px 20px;}
+  .stop-name{font-size:20px;}
+
+  /* Hotels en mode compact */
+  .hotel-img{height:140px;}
+
+  /* Tarifs : table compact */
+  .tarifs-table{font-size:11px;min-width:680px;}
+  .tarifs-table th,.tarifs-table td{padding:10px 6px;}
+
+  /* Programme accordion compact */
+  .prog-head{padding:14px 16px;gap:10px;}
+  .prog-day{width:44px;height:44px;}
+  .prog-day-num{font-size:15px;}
+  .prog-title{font-size:14px;}
+  .prog-body{padding:0 16px 16px 70px;font-size:13px;}
+
+  /* Inclus grid : 2 colonnes serrées */
+  .inclus-grid{gap:10px;}
+  .inc-card{padding:16px;}
+  .inc-icon{font-size:24px;margin-bottom:8px;}
+  .inc-title{font-size:13px;}
+  .inc-desc{font-size:12px;}
+
+  /* Form compact */
+  .form-wrap{gap:32px;}
+  .fc-body{padding:20px;}
+  .form-left h2{font-size:24px;}
+  .urgency-box{padding:12px 14px;}
+
+  /* Sticky bar mobile : compact */
+  .sticky-bar{padding:8px 16px;gap:10px;}
+  .sb-product{font-size:11px;}
+  .sb-price{font-size:20px;}
+  .sb-price span{font-size:11px;}
+  .sb-wa-btn,.sb-main-btn{padding:9px 14px;font-size:12px;}
+
+  /* Footer simple */
+  footer{padding:24px 20px 90px;flex-direction:column;text-align:center;gap:14px;}
+}
+
+/* === TRÈS PETITS ÉCRANS (< 480px) === */
+@media(max-width:480px){
+  .hero{height:50vh;min-height:340px;}
+  .hero-title{font-size:36px;}
+  .hero-title em{font-size:20px;}
+
+  /* Sticky bar : on masque le texte produit, on garde juste prix + boutons */
+  .sb-product{display:none;}
+  .sb-price{font-size:18px;}
+
+  /* Tarifs : on cache certaines colonnes secondaires */
+  .tarifs-table th:nth-child(5),
+  .tarifs-table td:nth-child(5),
+  .tarifs-table th:nth-child(6),
+  .tarifs-table td:nth-child(6){display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><div class="logo-icon">V</div>Voya<span>DZ</span></a>
+  <div class="nav-r">
+    <a class="nav-link" href="index.html">Accueil</a>
+    <a class="nav-link" href="index.html#asie">🌏 Asie</a>
+    <a class="nav-link" href="index.html#egypte">🏛️ Égypte</a>
+    <a class="nav-link" href="index.html#omra">🕋 Omra</a>
+    <a class="btn-nav" href="#demande">Réserver</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Accueil</a><span class="sep">›</span>
+    <a href="index.html#egypte">Égypte</a><span class="sep">›</span>
+    <span style="color:var(--navy);font-weight:700;">🇪🇬 Sharm + Caire</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">⭐ VOYA · Été 2026 · 55 départs disponibles</div>
+      <h1 class="hero-title">
+        ÉGYPTE
+        <em>Sharm + Le Caire · All Inclusive</em>
+      </h1>
+      <div class="hero-meta">
+        <span>9-10 Jours</span><div class="hm-sep"></div>
+        <span>D'Algérie</span><div class="hm-sep"></div>
+        <span>EgyptAir</span><div class="hm-sep"></div>
+        <span>All Inclusive Soft</span><div class="hm-sep"></div>
+        <span>55 départs été 2026</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hr-label">À partir de</div>
+      <div class="hr-price">223 000 <span class="hr-da">DA</span></div>
+      <div style="font-size:12px;color:var(--sub);margin-bottom:6px;">/ adulte · hôtel économique 4★</div>
+      <div class="hr-promo">🏨 15+ hôtels · 5 catégories disponibles</div>
+      <button class="hr-btn" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">✈️ Je réserve ma place</button>
+      <a href="https://wa.me/213XXXXXXXXX" class="hr-wa">💬 WhatsApp</a>
+      <div class="hr-note">Rappel sous 24h · Aucun paiement requis</div>
+    </div>
+  </div>
+</div>
+
+<div class="dates-strip">
+  <div class="ds-label">55 départs Été 2026</div>
+  <div class="ds-dates">
+    <div class="ds-date active"><div><div class="ds-month">Juillet</div><div class="ds-day">02</div><div class="ds-year">2026</div></div></div>
+    <div class="ds-date"><div><div class="ds-month">Juillet</div><div class="ds-day">→</div><div class="ds-year">31</div></div></div>
+    <div class="ds-date"><div><div class="ds-month">Août</div><div class="ds-day">→</div><div class="ds-year">31</div></div></div>
+    <div class="ds-date"><div><div class="ds-month">Sept.</div><div class="ds-day">19</div><div class="ds-year">2026</div></div></div>
+  </div>
+  <div class="ds-places"><div class="ds-dot"></div> <span>Places limitées</span></div>
+</div>
+
+<div class="includes">
+  <div class="inc-pill"><span>✈️ Vol</span> <span>EgyptAir (intl + domestique)</span></div>
+  <div class="inc-pill feature"><span>🏨 15+ hôtels</span> <span>5 catégories (4★ à Luxury)</span></div>
+  <div class="inc-pill"><span>🍽️ Sharm</span> <span>All Inclusive Soft</span></div>
+  <div class="inc-pill"><span>🥐 Caire</span> <span>Pyramisa 5★ + PDJ</span></div>
+  <div class="inc-pill"><span>🛕 Pyramides</span> <span>+ Sphinx + Khan Khalili</span></div>
+  <div class="inc-pill"><span>🛂 Visa</span> <span>Lettre de garantie (30 USD à l'arrivée)</span></div>
+  <div class="inc-pill"><span>🚐 Transferts</span> <span>aéroport · hôtels</span></div>
+  <div class="inc-pill"><span>🏖️ Excursions</span> <span>Naama Bay, Soho, Old Market</span></div>
+</div>
+
+<!-- FLEXIBILITÉ HIGHLIGHT -->
+<section style="padding:60px 64px 0;">
+  <div class="container">
+    <div class="doha-highlight">
+      <div class="doha-icon">🇪🇬</div>
+      <div class="doha-text">
+        <div class="doha-title">Choisissez votre formule</div>
+        <div class="doha-name">55 départs · 15+ hôtels · <em>5 catégories</em></div>
+        <div class="doha-desc">Du séjour économique 4★ au luxe Rixos 5★, choisissez l'hôtel et la date qui vous conviennent. Familles, couples, groupes : il y a forcément une formule adaptée à votre budget entre 223 000 et 873 000 DA. Demandez votre devis personnalisé.</div>
+      </div>
+      <div class="doha-badge">★ Flexibilité totale</div>
+    </div>
+  </div>
+</section>
+
+<section class="circuit-section">
+  <div class="container">
+    <div class="sec-label">Votre itinéraire</div>
+    <h2 class="sec-h">Histoire millénaire<br><em>+ Mer Rouge paradisiaque</em></h2>
+    <p class="sec-sub">Deux destinations égyptiennes incontournables : 2 nuits au Caire pour découvrir l'Égypte ancienne (Pyramides, Sphinx, Khan Khalili) avant 6 ou 7 nuits all inclusive à Sharm el-Sheikh, station balnéaire de luxe sur la Mer Rouge.</p>
+
+    <div>
+      <div class="stop">
+        <div class="stop-left"><div class="stop-num">1</div><div class="stop-nights">2<br>nuits</div></div>
+        <div class="stop-right">
+          <div class="stop-img si-hcm"><div class="stop-badge">Étape 1 · Civilisation</div></div>
+          <div class="stop-info">
+            <div class="stop-city">Égypte ancienne · Patrimoine</div>
+            <div class="stop-name">Le Caire</div>
+            <div class="stop-desc">Plongez dans 5000 ans d'histoire. Hébergement au Pyramisa Cairo & Suites 5★ avec petit-déjeuner inclus. Visitez les Pyramides de Gizeh et le Sphinx, le bazar Khan El Khalili, la mosquée Al-Azhar et Hussein. Profitez d'un dîner-croisière inoubliable sur le Nil avec spectacle. Possibilité d'extra : visite du Musée Égyptien.</div>
+            <div class="stop-tags">
+              <span class="stag">🏛️ Pyramides + Sphinx</span>
+              <span class="stag">🛍️ Khan El Khalili</span>
+              <span class="stag">🕌 Mosquée Al-Azhar</span>
+              <span class="stag">🚢 Dîner-croisière Nil</span>
+              <span class="stag">🏨 Pyramisa Cairo 5★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-left"><div class="stop-num highlight">2</div><div class="stop-nights" style="color:var(--amber);">6-7<br>nuits ⭐</div></div>
+        <div class="stop-right">
+          <div class="stop-img si-danang"><div class="stop-badge featured">Étape 2 · All Inclusive</div></div>
+          <div class="stop-info">
+            <div class="stop-city">Mer Rouge · Détente</div>
+            <div class="stop-name">Sharm El Sheikh</div>
+            <div class="stop-desc">6 à 7 nuits en All Inclusive Soft selon votre date de départ. Choisissez votre hôtel parmi 15+ établissements répartis en 5 catégories : Économique (Verginia Aqua Park 4★), Standard (Rehana Aqua Park 4★), Confort+ (Rehana Royal, Cleopatra Luxury 5★), Premium (Sea Beach Rotana, Sunrise, Pickalbatros 5★), Luxury (Swissotel, Rixos 5★). Excursions Naama Bay, Old Market, Mosquée Sahaba, Soho Square.</div>
+            <div class="stop-tags">
+              <span class="stag">🏖️ Plages Mer Rouge</span>
+              <span class="stag">🍹 All Inclusive Soft</span>
+              <span class="stag">🤿 Snorkeling</span>
+              <span class="stag">🎵 Soho Square</span>
+              <span class="stag">🏨 15+ hôtels au choix</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hotels-section">
+  <div class="container">
+    <div class="sec-label">Hébergements</div>
+    <h2 class="sec-h">5 catégories d'hôtels<br><em>de l'économique au luxe</em></h2>
+    <p class="sec-sub" style="margin-bottom:36px;">Choisissez votre niveau de confort à Sharm el-Sheikh selon votre budget. Tous incluent l'All Inclusive Soft, l'accès plage et piscine. Au Caire : Pyramisa Cairo 5★ pour tous.</p>
+    <div class="hotels-grid">
+      <div class="hotel"><div class="hotel-img h1"><div class="hotel-stars-badge">★★★★</div></div><div class="hotel-body"><div class="hotel-city">💰 Économique · Sharm</div><div class="hotel-name">Verginia Aqua Park 4★</div><div class="hotel-nights">Dès 223 000 DA</div></div></div>
+      <div class="hotel"><div class="hotel-img h2"><div class="hotel-stars-badge">★★★★</div></div><div class="hotel-body"><div class="hotel-city">✅ Standard · Sharm</div><div class="hotel-name">Rehana Aqua Park 4★</div><div class="hotel-nights">Dès 248 000 DA</div></div></div>
+      <div class="hotel"><div class="hotel-img h3"><div class="hotel-stars-badge">★★★★★</div></div><div class="hotel-body"><div class="hotel-city">⭐ Confort+ · Sharm</div><div class="hotel-name">Cleopatra · Rehana Royal 5★</div><div class="hotel-nights">Dès 278 000 DA</div></div></div>
+      <div class="hotel"><div class="hotel-img h4"><div class="hotel-stars-badge">★★★★★</div></div><div class="hotel-body"><div class="hotel-city">⭐⭐ Premium · Sharm</div><div class="hotel-name">Sea Beach Rotana, Pickalbatros, Sunrise 5★</div><div class="hotel-nights">Dès 313 000 DA</div></div></div>
+      <div class="hotel"><div class="hotel-img h5"><div class="hotel-special">💎 Luxury</div><div class="hotel-stars-badge">★★★★★</div></div><div class="hotel-body"><div class="hotel-city">Luxury Collection · Sharm</div><div class="hotel-name">Swissotel, Rixos 5★</div><div class="hotel-nights">Dès 460 000 DA</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifs-section">
+  <div class="container">
+    <div class="sec-label">Tarifs détaillés</div>
+    <h2 class="sec-h">15 hôtels Sharm<br><em>5 catégories de prix</em></h2>
+    <p class="sec-sub">Tarifs en DA · Vol EgyptAir + 2 nuits Pyramisa Cairo + Sharm All Inclusive + transferts + excursions inclus. Package 2N Caire + 7N Sharm.</p>
+
+    <div class="tarifs-wrap">
+      <table class="tarifs-table">
+        <thead>
+          <tr>
+            <th>Hôtel Sharm</th>
+            <th>Catégorie</th>
+            <th>Double</th>
+            <th>Triple</th>
+            <th>Single</th>
+            <th>1er Enf.</th>
+            <th>2è Enf.</th>
+            <th>Bébé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Verginia Aqua Park 4★</td><td>💰 Économique</td><td><span class="tarif-price">235 000</span></td><td>232 000</td><td>299 000</td><td>153 000</td><td>185 000</td><td>30 000</td></tr>
+          <tr><td>Rehana Aqua Park 4★</td><td>✅ Standard</td><td><span class="tarif-price">259 000</span></td><td>256 000</td><td>340 000</td><td>153 000</td><td>213 000</td><td>30 000</td></tr>
+          <tr><td>Rehana Royal Beach 5★</td><td>⭐ Confort+</td><td><span class="tarif-price">295 000</span></td><td>292 000</td><td>435 000</td><td>153 000</td><td>218 000</td><td>30 000</td></tr>
+          <tr><td>Cleopatra Luxury Resort 5★ GV</td><td>⭐ Confort+</td><td><span class="tarif-price">320 000</span></td><td>320 000</td><td>440 000</td><td>153 000</td><td>218 000</td><td>30 000</td></tr>
+          <tr><td>Cleopatra Luxury Resort 5★ SV</td><td>⭐ Confort+</td><td><span class="tarif-price">329 000</span></td><td>329 000</td><td>465 000</td><td>153 000</td><td>229 000</td><td>30 000</td></tr>
+          <tr><td>Sea Beach by Rotana 5★ PV</td><td>⭐⭐ Premium</td><td><span class="tarif-price">332 000</span></td><td>330 000</td><td>447 000</td><td>153 000</td><td>251 000</td><td>30 000</td></tr>
+          <tr><td>Sea Beach by Rotana 5★ SV</td><td>⭐⭐ Premium</td><td><span class="tarif-price">342 000</span></td><td>340 000</td><td>457 000</td><td>153 000</td><td>256 000</td><td>30 000</td></tr>
+          <tr><td>Sunrise Diamond 5★</td><td>⭐⭐ Premium</td><td><span class="tarif-price">390 000</span></td><td>388 000</td><td>565 000</td><td>156 000</td><td>272 000</td><td>30 000</td></tr>
+          <tr><td>Sunrise Arabian 5★</td><td>⭐⭐ Premium</td><td><span class="tarif-price">398 000</span></td><td>396 000</td><td>578 000</td><td>156 000</td><td>298 000</td><td>30 000</td></tr>
+          <tr><td>Pickalbatros Laguna Vista 5★</td><td>⭐⭐ Premium</td><td><span class="tarif-price">398 000</span></td><td>396 000</td><td>578 000</td><td>156 000</td><td>298 000</td><td>30 000</td></tr>
+          <tr><td>Swissotel Resort 5★</td><td>💎 Luxury</td><td><span class="tarif-price">460 000</span></td><td>448 000</td><td>630 000</td><td>164 000</td><td>324 000</td><td>30 000</td></tr>
+          <tr><td>Rixos Sharm El Sheikh 5★</td><td>💎 Luxury (Adults Only)</td><td><span class="tarif-price">558 000</span></td><td>546 000</td><td>698 000</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>Rixos Radamis Sharm 5★</td><td>💎 Luxury</td><td><span class="tarif-price">558 000</span></td><td>548 000</td><td>698 000</td><td>164 000</td><td>374 000</td><td>30 000</td></tr>
+          <tr><td>Rixos Premium Seagate 5★</td><td>💎 Luxury</td><td><span class="tarif-price">645 000</span></td><td>643 000</td><td>873 000</td><td>164 000</td><td>424 000</td><td>30 000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:20px;padding:14px 18px;background:#FEF3C7;border-left:4px solid #D97706;border-radius:8px;font-size:13px;color:#92400E;">
+      <strong>💡 À noter :</strong> Visa Égypte (30 USD) à payer en cash à l'arrivée au Caire. Le check-out est toujours à 14h. Capacité chambre standard : 4 personnes max. Package 2N+6N disponible selon les dates avec tarifs ajustés.
+    </div>
+  </div>
+</section>
+
+<section class="programme-section">
+  <div class="container">
+    <div class="sec-label">Programme jour par jour</div>
+    <h2 class="sec-h">9-10 jours,<br><em>2 destinations égyptiennes</em></h2>
+    <p class="sec-sub">Cliquez sur un jour pour voir le programme détaillé. La durée totale dépend de votre date de départ (Package 2N+6N ou 2N+7N).</p>
+
+    <div class="prog-list">
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">01</div><div class="prog-day-lbl">Vol</div></div>
+          <div class="prog-title">Arrivée au Caire<div class="prog-city">Vol Alger → Caire</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Vol EgyptAir d'Algérie vers Le Caire</li>
+            <li>Accueil personnalisé à l'aéroport du Caire</li>
+            <li>Transfert privé vers l'hôtel Pyramisa Cairo & Suites 5★</li>
+            <li>Check-in et repos</li>
+            <li>Soirée libre · Première découverte du Caire</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day special"><div class="prog-day-num">02</div><div class="prog-day-lbl">UNESCO ★</div></div>
+          <div class="prog-title">Pyramides + Sphinx + Khan El Khalili<div class="prog-city">L'Égypte des Pharaons</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Visite des Pyramides de Gizeh (Khéops, Khéphren, Mykérinos)</li>
+            <li>Le célèbre Sphinx de Gizeh</li>
+            <li>Déjeuner libre</li>
+            <li>Bazar Khan El Khalili (shopping artisanat, épices)</li>
+            <li>Mosquée Al-Azhar et mosquée Hussein</li>
+            <li>Soirée : Dîner-croisière sur le Nil avec spectacle</li>
+            <li>Possibilité extra : Musée Égyptien</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">03</div><div class="prog-day-lbl">Vol</div></div>
+          <div class="prog-title">Caire → Sharm El Sheikh<div class="prog-city">Vol domestique</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Check-out du Pyramisa Cairo</li>
+            <li>Transfert vers l'aéroport du Caire</li>
+            <li>Vol domestique EgyptAir vers Sharm El Sheikh</li>
+            <li>Accueil + transfert vers votre hôtel à Sharm</li>
+            <li>Check-in · Premier dîner All Inclusive</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">04</div><div class="prog-day-lbl">Plage</div></div>
+          <div class="prog-title">Sharm · All Inclusive<div class="prog-city">Détente Mer Rouge</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner All Inclusive</li>
+            <li>Détente à la plage · Mer Rouge</li>
+            <li>Snorkeling possible (récif corallien exceptionnel)</li>
+            <li>Activités hôtel (piscines, animations)</li>
+            <li>Repas et boissons soft inclus toute la journée</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day special"><div class="prog-day-num">05</div><div class="prog-day-lbl">Excursion</div></div>
+          <div class="prog-title">Naama Bay + Old Market<div class="prog-city">Découverte Sharm</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner All Inclusive</li>
+            <li>Excursion : Naama Bay (la "capitale" touristique de Sharm)</li>
+            <li>Old Market traditionnel + Mosquée Sahaba</li>
+            <li>Retour à l'hôtel</li>
+            <li>Soirée libre · Soho Square (animations, restaurants, shopping)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">06-08</div><div class="prog-day-lbl">Plage</div></div>
+          <div class="prog-title">Sharm · Journées libres<div class="prog-city">3 jours All Inclusive</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Journées libres en formule All Inclusive Soft</li>
+            <li>Excursions extras possibles : Désert du Sinaï, Ras Mohammed (snorkeling), île Tiran, mont Sinaï</li>
+            <li>Détente à la plage, piscines, animations</li>
+            <li>Spa et activités nautiques disponibles</li>
+            <li>Soirées animées au resort</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">09-10</div><div class="prog-day-lbl">Retour</div></div>
+          <div class="prog-title">Retour à Alger<div class="prog-city">Sharm → Caire → Alger</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner All Inclusive</li>
+            <li>Check-out de l'hôtel à Sharm</li>
+            <li>Transfert vers l'aéroport de Sharm</li>
+            <li>Vol domestique EgyptAir vers Le Caire</li>
+            <li>Vol international EgyptAir vers Alger</li>
+            <li>Arrivée à Alger</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="flight-section">
+  <div class="container">
+    <div class="sec-label">Plan de vol EgyptAir</div>
+    <h2 class="sec-h">55 départs<br><em>Été 2026</em></h2>
+    <p class="sec-sub">Vols EgyptAir International (Alger ↔ Caire) + Domestique (Caire ↔ Sharm). 55 départs au choix du 02/07 au 19/09/2026.</p>
+
+    <div class="flight-grid">
+      <div class="flight-card">
+        <div class="flight-date">🗓️ Juillet 2026</div>
+        <div class="flight-duration">8 départs (GM01 à GM08)</div>
+        <div class="flight-leg"><span class="flight-num">02/07</span><span class="flight-route">jusqu'au</span><span class="flight-time">25/07</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 846</span><span class="flight-route">ALG → CAI</span><span class="flight-time">12:55 → 18:40</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 845</span><span class="flight-route">CAI → ALG</span><span class="flight-time">09:45 → 11:55</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 025/028</span><span class="flight-route">CAI ↔ SSH</span><span class="flight-time">Domestique 1h</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-date">🗓️ Août 2026 (haute saison)</div>
+        <div class="flight-duration">25+ départs (GM09 à GM35)</div>
+        <div class="flight-leg"><span class="flight-num">01/08</span><span class="flight-route">jusqu'au</span><span class="flight-time">31/08</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 846/892</span><span class="flight-route">ALG → CAI</span><span class="flight-time">12:55 ou 00:55</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 845/891</span><span class="flight-route">CAI → ALG</span><span class="flight-time">09:45 ou 21:45</span></div>
+        <div class="flight-leg"><span class="flight-num">3-4 départs</span><span class="flight-route">par semaine</span><span class="flight-time">tout août</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-date">🗓️ Septembre 2026</div>
+        <div class="flight-duration">20+ départs (GM36 à GM55)</div>
+        <div class="flight-leg"><span class="flight-num">01/09</span><span class="flight-route">jusqu'au</span><span class="flight-time">19/09</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 846</span><span class="flight-route">ALG → CAI</span><span class="flight-time">12:55 → 18:40</span></div>
+        <div class="flight-leg"><span class="flight-num">MS 845</span><span class="flight-route">CAI → ALG</span><span class="flight-time">09:45 → 11:55</span></div>
+        <div class="flight-leg"><span class="flight-num">Tarifs</span><span class="flight-route">basse saison</span><span class="flight-time">avantageux</span></div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:16px 20px;background:#EBF8FF;border-left:4px solid #0EA5E9;border-radius:8px;font-size:13px;color:#0C4A6E;">
+      <strong>💬 Contactez-nous</strong> avec votre date souhaitée et nous vous confirmons le code de départ exact (GM01 à GM55) ainsi que le plan de vol détaillé.
+    </div>
+  </div>
+</section>
+
+<section class="inclus-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="sec-label" style="justify-content:center;">Tout inclus</div>
+      <h2 class="sec-h" style="text-align:center;">Contenu du<br><em>voyage</em></h2>
+    </div>
+    <div class="inclus-grid">
+      <div class="inc-card"><span class="inc-icon">✈️</span><div class="inc-title">EgyptAir</div><div class="inc-desc">Vol international Alger ↔ Caire + Vol domestique Caire ↔ Sharm</div></div>
+      <div class="inc-card feature"><span class="inc-icon">🍹</span><div class="inc-title">All Inclusive Soft</div><div class="inc-desc">6 ou 7 nuits à Sharm : repas + boissons soft inclus</div></div>
+      <div class="inc-card"><span class="inc-icon">🏨</span><div class="inc-title">Caire</div><div class="inc-desc">2 nuits Pyramisa Cairo & Suites 5★ avec petit-déjeuner</div></div>
+      <div class="inc-card"><span class="inc-icon">🏛️</span><div class="inc-title">Excursions Caire</div><div class="inc-desc">Pyramides, Sphinx, Khan El Khalili, mosquées, dîner-croisière Nil</div></div>
+      <div class="inc-card"><span class="inc-icon">🏖️</span><div class="inc-title">Excursions Sharm</div><div class="inc-desc">Naama Bay, Old Market, Mosquée Sahaba, Soho Square</div></div>
+      <div class="inc-card"><span class="inc-icon">🛂</span><div class="inc-title">Visa</div><div class="inc-desc">Lettre de garantie incluse (30 USD à l'arrivée au Caire)</div></div>
+      <div class="inc-card"><span class="inc-icon">🚐</span><div class="inc-title">Transferts</div><div class="inc-desc">Aéroport ↔ Hôtels (Caire + Sharm)</div></div>
+      <div class="inc-card"><span class="inc-icon">🎯</span><div class="inc-title">15+ Hôtels au choix</div><div class="inc-desc">5 catégories de prix selon votre budget</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="demande">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="form-left">
+        <div class="sec-label">Réservation</div>
+        <h2>Réservez votre<br><em>place maintenant</em></h2>
+        <p>55 départs disponibles entre le 02/07 et le 19/09. Un conseiller VoyaDZ vous contacte sur WhatsApp sous 24h pour confirmer votre hôtel et votre date exacte.</p>
+        <div class="urgency-box">
+          <div style="font-size:20px;flex-shrink:0;">🇪🇬</div>
+          <div><div class="urg-title">Civilisation millénaire + Mer Rouge</div><div class="urg-sub">2 destinations en 1 voyage · Dès 223 000 DA</div></div>
+        </div>
+        <ul class="promise-list">
+          <li class="promise-item"><div class="promise-check">✓</div><span>Réponse garantie sous 24h</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>Aucun paiement en ligne</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>Vol EgyptAir d'Algérie</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>Pyramisa Cairo 5★ inclus</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>All Inclusive Soft à Sharm</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>15+ hôtels au choix · 5 catégories</span></li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <div class="fc-top">
+          <div class="fc-top-title">Caire + Sharm Été 2026</div>
+          <div class="fc-top-sub">9-10 jours · EgyptAir · 55 départs disponibles</div>
+        </div>
+        <div class="fc-body">
+          <form name="reservation-sharm-caire" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field" id="formContent" onsubmit="return handleSubmit(event)">
+            <input type="hidden" name="form-name" value="reservation-sharm-caire">
+            <input type="hidden" name="produit" value="Combiné Caire + Sharm El Sheikh Été 2026">
+            <input type="hidden" name="reference" id="f-ref">
+            <p class="hidden" style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+            <div class="f-grid">
+              <div class="field"><label class="f-label">Prénom <span class="f-req">*</span></label><input class="f-input" id="f-prenom" name="prenom" type="text" placeholder="Mohamed" required><div class="f-error" id="fe-prenom">Champ requis</div></div>
+              <div class="field"><label class="f-label">Nom <span class="f-req">*</span></label><input class="f-input" id="f-nom" name="nom" type="text" placeholder="Benali" required><div class="f-error" id="fe-nom">Champ requis</div></div>
+            </div>
+            <div class="field"><label class="f-label">WhatsApp <span class="f-req">*</span></label><input class="f-input" id="f-wa" name="whatsapp" type="tel" placeholder="0661 234 567" required><div class="f-error" id="fe-wa">Numéro invalide</div></div>
+            <div class="field">
+              <label class="f-label">Mois de départ souhaité <span class="f-req">*</span></label>
+              <div class="date-chips">
+                <div class="dc" onclick="pickDate(this,'Juillet 2026')">Juillet</div>
+                <div class="dc" onclick="pickDate(this,'Août 2026')">Août</div>
+                <div class="dc" onclick="pickDate(this,'Septembre 2026')">Septembre</div>
+              </div>
+              <input type="hidden" id="f-date" name="date_depart">
+              <div class="f-error" id="fe-date">Veuillez choisir un mois</div>
+            </div>
+            <div class="field"><label class="f-label">Catégorie d'hôtel préférée <span class="f-req">*</span></label><select class="f-input" id="f-hotel" name="categorie" required><option value="">Sélectionner...</option><option>💰 Économique - Verginia Aqua Park (dès 223k DA)</option><option>✅ Standard - Rehana Aqua Park (dès 248k DA)</option><option>⭐ Confort+ - Rehana Royal / Cleopatra Luxury (dès 278k DA)</option><option>⭐⭐ Premium - Rotana / Sunrise / Pickalbatros (dès 313k DA)</option><option>💎 Luxury - Swissotel / Rixos (dès 460k DA)</option><option>Je ne sais pas, conseillez-moi</option></select><div class="f-error" id="fe-hotel">Veuillez sélectionner</div></div>
+            <div class="field"><label class="f-label">Composition du groupe <span class="f-req">*</span></label><select class="f-input" id="f-pers" name="personnes" required><option value="">Sélectionner...</option><option>1 personne (chambre single)</option><option>2 adultes (chambre double)</option><option>2 adultes + 1 enfant</option><option>2 adultes + 2 enfants</option><option>Groupe 4+ adultes</option><option>Famille avec bébé</option></select><div class="f-error" id="fe-pers">Veuillez sélectionner</div></div>
+            <div class="field"><label class="f-label">Questions / Précisions</label><textarea class="f-input" id="f-msg" name="message" rows="3" placeholder="Ex : voyage de noces, âges des enfants, préférence package 2N+6N ou 2N+7N..."></textarea></div>
+            <button class="btn-submit" id="submitBtn" type="submit">🇪🇬 Confirmer ma demande</button>
+            <p class="f-note">Un conseiller vous rappelle sous 24h · Gratuit · Sans engagement</p>
+          </form>
+          <div class="success-box" id="successBox">
+            <div class="sb-icon">✓</div>
+            <h3 class="sb-title">Demande envoyée !</h3>
+            <p class="sb-sub">Notre conseiller vous contacte sur WhatsApp dans les 24h pour votre voyage Égypte.</p>
+            <a href="#" class="sb-wa" id="sbWa">💬 Écrire sur WhatsApp</a>
+            <div class="sb-ref" id="sbRef"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Voya<span>DZ</span> · <span style="color:rgba(255,255,255,0.5);font-weight:400;">Voyages organisés d'Algérie</span> 🇩🇿</div>
+  <p>© 2026 VoyaDZ · Tous droits réservés</p>
+  <div style="display:flex;gap:16px;"><a href="index.html">Accueil</a><a href="index.html#egypte">Égypte</a><a href="https://wa.me/213XXXXXXXXX">WhatsApp</a></div>
+</footer>
+
+<div class="sticky-bar">
+  <div><div class="sb-product">Caire + Sharm Été 2026 · 55 départs · EgyptAir</div><div class="sb-price">Dès 223 000 DA <span>· All Inclusive</span></div></div>
+  <div class="sb-right"><a href="https://wa.me/213XXXXXXXXX" class="sb-wa-btn">💬 WhatsApp</a><a href="#demande" class="sb-main-btn">🇪🇬 Réserver</a></div>
+</div>
+
+<script>
+const WA='213XXXXXXXXX';
+let selectedDate='';
+
+function genRef(){
+  const d=new Date();
+  return 'VTN-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+(Math.floor(Math.random()*9000)+1000);
+}
+
+function pickDate(el,val){
+  document.querySelectorAll('.dc').forEach(d=>d.classList.remove('sel'));
+  el.classList.add('sel');
+  selectedDate=val;
+  document.getElementById('f-date').value=val;
+  document.getElementById('fe-date').classList.remove('show');
+}
+
+document.querySelectorAll('.ds-date').forEach(d=>d.addEventListener('click',()=>{
+  document.querySelectorAll('.ds-date').forEach(x=>x.classList.remove('active'));
+  d.classList.add('active');
+}));
+
+function toggleProg(el){
+  el.parentElement.classList.toggle('open');
+}
+
+function validate(){
+  let ok=true;
+  [
+    {id:'f-prenom',fn:v=>v.trim().length>=2},
+    {id:'f-nom',fn:v=>v.trim().length>=2},
+    {id:'f-wa',fn:v=>/^0[5-7]\d{8}$/.test(v.replace(/\s/g,''))},
+    {id:'f-pers',fn:v=>v!==''}
+  ].forEach(c=>{
+    const el=document.getElementById(c.id);
+    const err=document.getElementById('fe-'+c.id.replace('f-',''));
+    const v=c.fn(el.value);
+    el.classList.toggle('err',!v);
+    err&&err.classList.toggle('show',!v);
+    if(!v)ok=false;
+  });
+  if(!selectedDate){
+    document.getElementById('fe-date').classList.add('show');
+    ok=false;
+  }
+  return ok;
+}
+
+function encode(data){
+  return Object.keys(data).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
+}
+
+async function handleSubmit(event){
+  event.preventDefault();
+  if(!validate())return false;
+
+  const btn=document.getElementById('submitBtn');
+  btn.disabled=true;
+  btn.textContent='Envoi en cours...';
+
+  const ref=genRef();
+  document.getElementById('f-ref').value=ref;
+
+  const form=event.target;
+  const formData=new FormData(form);
+  const data={};
+  formData.forEach((v,k)=>{data[k]=v;});
+
+  // Affiche la confirmation immédiate avec WhatsApp
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('successBox').classList.add('show');
+  document.getElementById('sbRef').textContent='Référence : '+ref;
+  const msg=encodeURIComponent('Salam ! Demande Combiné Caire + Sharm Été 2026.\nRef : '+ref+'\nDépart : '+selectedDate+'\nPersonnes : '+data.personnes);
+  document.getElementById('sbWa').href='https://wa.me/'+WA+'?text='+msg;
+
+  // Envoi vers Netlify Forms en arrière-plan
+  try{
+    await fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:encode(data)
+    });
+  }catch(e){
+    console.error('Erreur envoi:',e);
+  }
+
+  return false;
+}
+
+['f-prenom','f-nom','f-wa','f-pers'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el)el.addEventListener('input',()=>{
+    el.classList.remove('err');
+    const err=document.getElementById('fe-'+id.replace('f-',''));
+    if(err)err.classList.remove('show');
+  });
+});
+
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow=window.scrollY>10?'0 4px 20px rgba(15,35,71,0.08)':'none';
+});
+</script>
+</body>
+</html>
