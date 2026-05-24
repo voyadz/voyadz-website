@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malaisie Summer 2026 — VoyaDZ · 10 Jours / 9 Nuits · Kuala Lumpur + Langkawi</title>
+<meta name="description" content="Voyage organisé Malaisie d'Algérie. Vol Qatar Airways · 2 hôtels · Kuala Lumpur, Tours Petronas, Batu Caves, Langkawi plage paradisiaque. À partir de 379 000 DA.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Bleu Profond Premium + accents Malaisie */
+  --navy:#0F2347;        /* Base · Navy profond */
+  --royal:#1E40AF;       /* Royal Blue */
+  --sky:#0EA5E9;
+  --tropical:#DC2626;    /* Rouge Malaisie */
+  --palm:#059669;        /* Vert palmier */
+  --turquoise:#06B6D4;
+  --sky-light:#E0F2FE;
+  --cloud:#FAFBFC;       /* Fond */
+  --amber:#F59E0B;       /* Premium accent */
+  --amber-light:#FEF3C7;
+  --ink:#0F172A;
+  --sub:#64748B;
+  --border:#E2E8F0;
+  --green:#15803D;
+  --red:#DC2626;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--cloud);color:var(--ink);line-height:1.6;font-size:15px;}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s;}
+.logo{font-family:'Inter',sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px;letter-spacing:-0.5px;}
+.logo-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--navy),var(--royal));display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:14px;letter-spacing:-1px;}
+.logo span{color:var(--sky);}
+.nav-r{display:flex;align-items:center;gap:24px;}
+.nav-link{font-size:14px;color:var(--sub);text-decoration:none;font-weight:500;transition:color .2s;}
+.nav-link:hover{color:var(--navy);}
+.btn-nav{padding:10px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;background:var(--navy);color:white;border:none;transition:all .2s;}
+.btn-nav:hover{background:var(--royal);transform:translateY(-1px);}
+
+/* === BREADCRUMB === */
+.breadcrumb{padding:88px 64px 0;background:var(--cloud);}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;font-size:13px;color:var(--sub);padding-bottom:20px;}
+.breadcrumb a{color:var(--sub);text-decoration:none;}
+.breadcrumb a:hover{color:var(--sky);}
+.breadcrumb .sep{margin:0 8px;color:var(--border);}
+
+/* === HERO === */
+.hero{position:relative;height:80vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-img{position:absolute;inset:0;background:url('images/malaisie-hero.jpg') center/cover no-repeat,linear-gradient(135deg,#DC2626,#7F1D1D);}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,71,0.2) 0%,rgba(15,35,71,0.4) 50%,rgba(15,35,71,0.95) 100%);}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 64px 56px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:flex-end;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.95);padding:7px 16px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin-bottom:20px;}
+.hero-title{font-family:'Inter',sans-serif;font-size:clamp(48px,8vw,96px);font-weight:900;line-height:0.95;color:white;margin-bottom:14px;letter-spacing:-3px;}
+.hero-title em{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:clamp(28px,4.5vw,52px);color:rgba(255,255,255,0.9);margin-top:6px;letter-spacing:0;}
+.hero-meta{display:flex;align-items:center;gap:18px;font-size:14px;color:rgba(255,255,255,0.8);font-weight:500;flex-wrap:wrap;}
+.hm-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.4);}
+
+/* Hero card prix */
+.hero-right{background:white;border-radius:18px;padding:28px 24px;min-width:300px;box-shadow:0 24px 70px rgba(0,0,0,0.25);}
+.hr-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sub);margin-bottom:6px;}
+.hr-price{font-family:'Inter',sans-serif;font-size:46px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:4px;letter-spacing:-2px;}
+.hr-da{font-size:16px;color:var(--sub);font-weight:600;}
+.hr-promo{font-size:12px;font-weight:700;color:var(--green);background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:8px 12px;margin:12px 0 16px;display:flex;align-items:center;gap:6px;}
+.hr-btn{width:100%;padding:14px;border-radius:10px;background:var(--navy);color:white;border:none;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:10px;transition:all .2s;}
+.hr-btn:hover{background:var(--royal);}
+.hr-wa{width:100%;padding:12px;border-radius:10px;background:#F0FDF4;border:1.5px solid #22C55E;color:#15803D;font-family:inherit;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:all .2s;}
+.hr-wa:hover{background:#DCFCE7;}
+.hr-note{text-align:center;font-size:11px;color:var(--sub);margin-top:10px;}
+
+/* === DATES STRIP === */
+.dates-strip{background:var(--navy);padding:22px 64px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
+.ds-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);white-space:nowrap;}
+.ds-dates{display:flex;gap:10px;flex:1;flex-wrap:wrap;}
+.ds-date{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:10px 16px;cursor:pointer;transition:all .2s;}
+.ds-date:hover,.ds-date.active{background:var(--sky);border-color:var(--sky);}
+.ds-date.promo{border:1px solid var(--amber);}
+.ds-date.promo:hover,.ds-date.promo.active{background:var(--amber);border-color:var(--amber);}
+.ds-date.promo.active .ds-day,.ds-date.promo.active .ds-month,.ds-date.promo.active .ds-year{color:var(--navy);}
+.ds-month{font-size:10px;color:rgba(255,255,255,0.6);font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.ds-day{font-family:'Inter',sans-serif;font-size:22px;font-weight:800;color:white;line-height:1;letter-spacing:-1px;}
+.ds-year{font-size:10px;color:rgba(255,255,255,0.4);}
+.ds-promo-tag{position:absolute;top:-8px;right:-8px;background:var(--amber);color:var(--navy);font-size:9px;font-weight:800;padding:2px 6px;border-radius:8px;letter-spacing:0.5px;}
+.ds-date.promo{position:relative;}
+.ds-places{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.7);white-space:nowrap;}
+.ds-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
+
+/* === INCLUDES PILLS === */
+.includes{background:white;border-bottom:1px solid var(--border);padding:18px 64px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.inc-pill{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--ink);background:var(--cloud);border:1px solid var(--border);border-radius:40px;padding:7px 14px;}
+.inc-pill span{color:var(--sub);}
+.inc-pill.feature{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border-color:var(--amber);}
+.inc-pill.feature span{color:#92400E;}
+
+/* === SECTIONS === */
+section{padding:80px 64px;}
+.container{max-width:1100px;margin:0 auto;}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:14px;}
+.sec-label::before{content:'';width:24px;height:2px;background:var(--sky);}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--navy);}
+.sec-h em{font-style:italic;color:var(--sky);}
+.sec-sub{font-size:16px;color:var(--sub);max-width:560px;line-height:1.7;margin-bottom:48px;}
+
+/* === DOHA HIGHLIGHT BOX === */
+.doha-highlight{background:linear-gradient(135deg,var(--navy),var(--royal));border-radius:20px;padding:36px 40px;color:white;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;margin-bottom:60px;position:relative;overflow:hidden;}
+.doha-highlight::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,0.3),transparent 70%);}
+.doha-icon{font-size:48px;position:relative;z-index:2;}
+.doha-text{position:relative;z-index:2;}
+.doha-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+.doha-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:8px;line-height:1.2;}
+.doha-name em{font-style:italic;color:var(--amber);}
+.doha-desc{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;}
+.doha-badge{position:relative;z-index:2;background:var(--amber);color:var(--navy);font-size:11px;font-weight:800;padding:8px 14px;border-radius:8px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
+
+/* === CIRCUIT === */
+.circuit-section{background:white;}
+.stop{display:grid;grid-template-columns:80px 1fr;border-bottom:1px solid #F0EDE6;}
+.stop:last-child{border-bottom:none;}
+.stop-left{padding:32px 0;display:flex;flex-direction:column;align-items:center;border-right:2px solid var(--border);}
+.stop-num{width:38px;height:38px;border-radius:50%;background:var(--navy);color:white;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+.stop-num.highlight{background:var(--amber);color:var(--navy);}
+.stop-nights{font-size:10px;font-weight:800;color:var(--sub);text-transform:uppercase;letter-spacing:1px;margin-top:8px;text-align:center;line-height:1.3;}
+.stop-right{display:grid;grid-template-columns:240px 1fr;}
+.stop-img{height:200px;background-size:cover;background-position:center;position:relative;}
+.stop-info{padding:26px 28px;}
+.stop-city{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:6px;}
+.stop-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.stop-desc{font-size:14px;color:var(--sub);line-height:1.65;margin-bottom:14px;}
+.stop-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.stag{font-size:11px;font-weight:600;color:var(--ink);background:var(--cloud);border:1px solid var(--border);border-radius:6px;padding:4px 10px;}
+.stop-badge{position:absolute;bottom:12px;left:12px;background:white;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:800;color:var(--navy);}
+.stop-badge.featured{background:var(--amber);color:var(--navy);}
+
+.si-kl{background:url('images/malaisie-kl.jpg') center/cover no-repeat,linear-gradient(135deg,#DC2626,#7F1D1D);}
+.si-langkawi{background:url('images/malaisie-langkawi.jpg') center/cover no-repeat,linear-gradient(135deg,#059669,#064E3B);}
+
+/* === HOTELS === */
+.hotels-section{background:var(--cloud);}
+.hotels-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.hotel{background:white;border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:all .3s;}
+.hotel:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,35,71,0.12);}
+.hotel-img{height:220px;background-size:cover;background-position:center;position:relative;}
+.hotel-img.h1{background:url('images/malaisie-hotel1.jpg') center/cover no-repeat,linear-gradient(135deg,#DC2626,#7F1D1D);}
+.hotel-img.h2{background:url('images/malaisie-hotel2.jpg') center/cover no-repeat,linear-gradient(135deg,#059669,#064E3B);}
+.hotel-stars-badge{position:absolute;top:8px;right:8px;background:white;border-radius:6px;padding:4px 10px;font-size:11px;color:var(--amber);font-weight:800;letter-spacing:0.5px;}
+.hotel-special{position:absolute;top:8px;left:8px;background:var(--amber);color:var(--navy);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;}
+.hotel-body{padding:16px;}
+.hotel-city{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:4px;}
+.hotel-name{font-size:15px;font-weight:700;color:var(--navy);}
+.hotel-nights{font-size:12px;color:var(--sub);margin-top:4px;font-weight:500;}
+
+/* === TARIFS === */
+.tarifs-section{background:white;}
+.tarifs-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;}
+.tarifs-table{width:100%;min-width:820px;border-collapse:collapse;font-size:13px;}
+.tarifs-table thead{background:var(--navy);color:white;}
+.tarifs-table th{padding:14px 10px;text-align:center;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.tarifs-table th:first-child{text-align:left;}
+.tarifs-table td{padding:14px 10px;text-align:center;border-bottom:1px solid var(--border);}
+.tarifs-table td:first-child{text-align:left;font-weight:600;color:var(--navy);}
+.tarifs-table tr:last-child td{border-bottom:none;}
+.tarif-price{font-family:'Inter',sans-serif;font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-0.5px;}
+.tarifs-table tr.promo td{background:#FFFBEB;position:relative;}
+.tarifs-table tr.promo td:first-child{color:var(--amber);font-weight:800;}
+.tarif-promo-badge{display:inline-block;background:var(--amber);color:var(--navy);font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;margin-left:6px;letter-spacing:0.5px;}
+
+/* === PROGRAMME === */
+.programme-section{background:var(--cloud);}
+.prog-list{display:flex;flex-direction:column;gap:8px;}
+.prog-item{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .2s;}
+.prog-item:hover{border-color:var(--sky);}
+.prog-head{padding:16px 20px;cursor:pointer;display:flex;align-items:center;gap:14px;user-select:none;transition:background .2s;}
+.prog-head:hover{background:var(--cloud);}
+.prog-day{width:54px;height:54px;border-radius:10px;background:var(--navy);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;}
+.prog-day.special{background:var(--amber);color:var(--navy);}
+.prog-day-num{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;line-height:1;letter-spacing:-1px;}
+.prog-day-lbl{font-size:9px;letter-spacing:1px;text-transform:uppercase;opacity:0.7;font-weight:700;}
+.prog-title{flex:1;font-weight:700;color:var(--navy);font-size:15px;}
+.prog-city{font-size:12px;color:var(--sky);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+.prog-arrow{font-size:14px;color:var(--sub);transition:transform .3s;}
+.prog-item.open .prog-arrow{transform:rotate(180deg);}
+.prog-body{display:none;padding:0 20px 20px 88px;font-size:14px;color:var(--sub);line-height:1.7;}
+.prog-item.open .prog-body{display:block;}
+.prog-body ul{list-style:none;padding:0;margin:0;}
+.prog-body li{padding:4px 0;display:flex;align-items:flex-start;gap:8px;}
+.prog-body li::before{content:'•';color:var(--sky);flex-shrink:0;font-weight:700;}
+
+/* === FLIGHT === */
+.flight-section{background:white;border-top:1px solid var(--border);}
+.flight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.flight-card{background:var(--cloud);border:1px solid var(--border);border-radius:14px;padding:24px;transition:all .2s;}
+.flight-card.promo{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border-color:var(--amber);}
+.flight-card:hover{border-color:var(--sky);}
+.flight-date{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;}
+.flight-card.promo .flight-date{color:#92400E;}
+.flight-duration{font-size:11px;color:var(--green);font-weight:700;margin-bottom:14px;}
+.flight-promo-tag{display:inline-block;background:var(--amber);color:var(--navy);font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;margin-left:6px;letter-spacing:0.5px;text-transform:uppercase;}
+.flight-leg{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--border);font-size:13px;}
+.flight-leg:last-child{border-bottom:none;}
+.flight-num{font-family:monospace;font-weight:700;color:var(--navy);font-size:12px;background:white;padding:3px 8px;border-radius:4px;border:1px solid var(--border);}
+.flight-route{flex:1;color:var(--ink);font-weight:600;}
+.flight-time{font-size:11px;color:var(--sub);font-family:monospace;}
+
+/* === INCLUS === */
+.inclus-section{background:var(--cloud);}
+.inclus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.inc-card{padding:24px;border-radius:14px;background:white;border:1px solid var(--border);transition:all .2s;}
+.inc-card:hover{border-color:var(--sky);transform:translateY(-2px);}
+.inc-card.feature{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border-color:var(--amber);}
+.inc-icon{font-size:32px;margin-bottom:14px;display:block;}
+.inc-title{font-size:15px;font-weight:800;margin-bottom:6px;color:var(--navy);}
+.inc-desc{font-size:13px;color:var(--sub);line-height:1.6;}
+.inc-card.feature .inc-title{color:#92400E;}
+
+/* === FORM === */
+.form-section{background:white;border-top:1px solid var(--border);}
+.form-wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start;}
+.form-left h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:700;line-height:1.2;margin-bottom:14px;color:var(--navy);}
+.form-left h2 em{font-style:italic;color:var(--sky);}
+.form-left p{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:28px;}
+.urgency-box{background:linear-gradient(135deg,var(--amber-light),#FFFBEB);border:1px solid var(--amber);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;}
+.urg-title{font-size:13px;font-weight:800;color:#92400E;}
+.urg-sub{font-size:12px;color:#92400E;margin-top:2px;}
+.promise-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.promise-item{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink);}
+.promise-check{width:22px;height:22px;border-radius:50%;flex-shrink:0;background:#F0FDF4;border:1.5px solid #22C55E;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--green);font-weight:700;}
+.form-card{background:var(--cloud);border-radius:20px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(15,35,71,0.08);overflow:hidden;}
+.fc-top{background:var(--navy);padding:24px 28px;}
+.fc-top-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:4px;}
+.fc-top-sub{font-size:13px;color:rgba(255,255,255,0.65);}
+.fc-body{padding:28px;background:white;}
+.field{margin-bottom:16px;}
+.f-label{display:block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--sub);margin-bottom:6px;}
+.f-req{color:var(--red);}
+.f-input{width:100%;background:var(--cloud);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;transition:all .2s;appearance:none;}
+.f-input:focus{border-color:var(--sky);background:white;}
+.f-input::placeholder{color:#94A3B8;}
+.f-input option{background:white;}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.f-error{font-size:11px;color:var(--red);margin-top:4px;display:none;}
+.f-error.show{display:block;}
+.f-input.err{border-color:#FCA5A5;}
+.date-chips{display:flex;gap:8px;flex-wrap:wrap;}
+.dc{padding:9px 14px;border-radius:8px;background:var(--cloud);border:1.5px solid var(--border);font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;transition:all .2s;}
+.dc:hover{border-color:var(--navy);color:var(--navy);}
+.dc.sel{background:var(--navy);border-color:var(--navy);color:white;}
+.dc.promo-chip{border-color:var(--amber);}
+.dc.promo-chip.sel{background:var(--amber);border-color:var(--amber);color:var(--navy);}
+.btn-submit{width:100%;padding:16px;border-radius:10px;background:var(--navy);color:white;border:none;font-family:inherit;font-size:16px;font-weight:800;cursor:pointer;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s;}
+.btn-submit:hover{background:var(--royal);}
+.btn-submit:disabled{opacity:0.5;cursor:not-allowed;}
+.f-note{text-align:center;font-size:12px;color:var(--sub);margin-top:10px;}
+.success-box{display:none;text-align:center;padding:40px 20px;}
+.success-box.show{display:block;}
+.sb-icon{width:64px;height:64px;border-radius:50%;background:#F0FDF4;border:2px solid #22C55E;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 20px;}
+.sb-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:8px;color:var(--navy);}
+.sb-sub{font-size:14px;color:var(--sub);line-height:1.7;max-width:300px;margin:0 auto 20px;}
+.sb-wa{display:inline-flex;align-items:center;gap:8px;background:#F0FDF4;border:1.5px solid #22C55E;border-radius:8px;padding:12px 22px;font-size:14px;font-weight:700;color:var(--green);text-decoration:none;}
+.sb-ref{font-size:11px;color:var(--sub);margin-top:12px;font-family:monospace;}
+
+/* === STICKY BAR === */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:100;background:white;border-top:1px solid var(--border);padding:12px 48px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 -8px 32px rgba(15,35,71,0.1);}
+.sb-product{font-size:13px;color:var(--sub);margin-bottom:2px;}
+.sb-price{font-family:'Inter',sans-serif;font-size:26px;font-weight:800;color:var(--navy);display:flex;align-items:baseline;gap:8px;letter-spacing:-1px;}
+.sb-price span{font-size:13px;color:var(--sub);font-weight:500;}
+.sb-right{display:flex;gap:10px;align-items:center;}
+.sb-wa-btn{padding:11px 20px;border-radius:8px;background:#F0FDF4;border:1.5px solid #22C55E;color:var(--green);font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px;}
+.sb-main-btn{padding:12px 28px;border-radius:8px;background:var(--navy);color:white;font-size:14px;font-weight:800;border:none;text-decoration:none;transition:all .2s;}
+.sb-main-btn:hover{background:var(--royal);}
+
+/* === FOOTER === */
+footer{background:var(--navy);color:white;padding:40px 64px 80px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.f-logo{font-family:'Inter',sans-serif;font-size:20px;font-weight:900;color:white;letter-spacing:-0.5px;}
+.f-logo span{color:var(--sky);}
+footer p{font-size:13px;color:rgba(255,255,255,0.5);}
+footer a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;transition:color .2s;}
+footer a:hover{color:var(--sky);}
+
+/* === RESPONSIVE === */
+@media(max-width:1024px){
+  nav{padding:0 24px;}
+  .hero-content{padding:0 24px 48px;grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  section{padding:60px 24px;}
+  .breadcrumb,.dates-strip,.includes{padding-left:24px;padding-right:24px;}
+  .stop-right{grid-template-columns:1fr;}
+  .stop-img{height:200px;}
+  .hotels-grid{grid-template-columns:1fr;}
+  .flight-grid{grid-template-columns:1fr;}
+  .inclus-grid{grid-template-columns:1fr 1fr;}
+  .form-wrap{grid-template-columns:1fr;gap:40px;}
+  .sticky-bar{padding:10px 20px;}
+  footer{padding:32px 24px 80px;}
+  .nav-r .nav-link{display:none;}
+  .doha-highlight{grid-template-columns:1fr;text-align:center;padding:24px;}
+  .doha-icon{margin:0 auto;}
+}
+
+/* === MOBILE OPTIMISÉ (< 768px) === */
+@media(max-width:768px){
+  /* Hero plus compact : on voit la photo + un teaser du contenu en dessous */
+  .hero{height:55vh;min-height:380px;max-height:500px;}
+  .hero-content{padding:0 20px 32px;}
+  .hero-title{font-size:42px;letter-spacing:-1.5px;}
+  .hero-title em{font-size:24px;}
+  .hero-meta{font-size:12px;gap:12px;}
+  .hero-meta span{font-size:12px;}
+  .hero-badge{font-size:10px;padding:5px 12px;margin-bottom:12px;}
+
+  /* Breadcrumb plus compact */
+  .breadcrumb{padding:80px 20px 0;}
+  .breadcrumb-inner{padding-bottom:14px;font-size:12px;}
+
+  /* Dates strip horizontal scrollable */
+  .dates-strip{padding:16px 20px;gap:16px;flex-direction:column;align-items:flex-start;}
+  .ds-dates{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch;}
+  .ds-date{flex-shrink:0;}
+
+  /* Includes pills sur une seule ligne défilable */
+  .includes{padding:14px 20px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;}
+  .inc-pill{flex-shrink:0;font-size:11px;padding:6px 12px;}
+
+  /* Sections plus aérées */
+  section{padding:48px 20px;}
+  .sec-h{font-size:28px;letter-spacing:-0.5px;}
+
+  /* Doha box compact */
+  .doha-highlight{padding:20px;gap:14px;}
+  .doha-icon{font-size:36px;}
+  .doha-name{font-size:20px;}
+  .doha-desc{font-size:13px;}
+
+  /* Circuit stops compact */
+  .stop{grid-template-columns:60px 1fr;}
+  .stop-left{padding:20px 0;}
+  .stop-num{width:32px;height:32px;font-size:12px;}
+  .stop-img{height:160px;}
+  .stop-info{padding:18px 20px;}
+  .stop-name{font-size:20px;}
+
+  /* Hotels en mode compact */
+  .hotel-img{height:140px;}
+
+  /* Tarifs : table compact */
+  .tarifs-table{font-size:11px;min-width:680px;}
+  .tarifs-table th,.tarifs-table td{padding:10px 6px;}
+
+  /* Programme accordion compact */
+  .prog-head{padding:14px 16px;gap:10px;}
+  .prog-day{width:44px;height:44px;}
+  .prog-day-num{font-size:15px;}
+  .prog-title{font-size:14px;}
+  .prog-body{padding:0 16px 16px 70px;font-size:13px;}
+
+  /* Inclus grid : 2 colonnes serrées */
+  .inclus-grid{gap:10px;}
+  .inc-card{padding:16px;}
+  .inc-icon{font-size:24px;margin-bottom:8px;}
+  .inc-title{font-size:13px;}
+  .inc-desc{font-size:12px;}
+
+  /* Form compact */
+  .form-wrap{gap:32px;}
+  .fc-body{padding:20px;}
+  .form-left h2{font-size:24px;}
+  .urgency-box{padding:12px 14px;}
+
+  /* Sticky bar mobile : compact */
+  .sticky-bar{padding:8px 16px;gap:10px;}
+  .sb-product{font-size:11px;}
+  .sb-price{font-size:20px;}
+  .sb-price span{font-size:11px;}
+  .sb-wa-btn,.sb-main-btn{padding:9px 14px;font-size:12px;}
+
+  /* Footer simple */
+  footer{padding:24px 20px 90px;flex-direction:column;text-align:center;gap:14px;}
+}
+
+/* === TRÈS PETITS ÉCRANS (< 480px) === */
+@media(max-width:480px){
+  .hero{height:50vh;min-height:340px;}
+  .hero-title{font-size:36px;}
+  .hero-title em{font-size:20px;}
+
+  /* Sticky bar : on masque le texte produit, on garde juste prix + boutons */
+  .sb-product{display:none;}
+  .sb-price{font-size:18px;}
+
+  /* Tarifs : on cache certaines colonnes secondaires */
+  .tarifs-table th:nth-child(5),
+  .tarifs-table td:nth-child(5),
+  .tarifs-table th:nth-child(6),
+  .tarifs-table td:nth-child(6){display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><div class="logo-icon">V</div>Voya<span>DZ</span></a>
+  <div class="nav-r">
+    <a class="nav-link" href="index.html">Accueil</a>
+    <a class="nav-link" href="index.html#asie">🌏 Asie</a>
+    <a class="nav-link" href="index.html#egypte">🏛️ Égypte</a>
+    <a class="nav-link" href="index.html#omra">🕋 Omra</a>
+    <a class="btn-nav" href="#demande">Réserver</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Accueil</a><span class="sep">›</span>
+    <a href="index.html#asie">Asie</a><span class="sep">›</span>
+    <span style="color:var(--navy);font-weight:700;">🇲🇾 Malaisie</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">⭐ VOYA · Été 2026 · Ville + Plage</div>
+      <h1 class="hero-title">
+        MALAISIE
+        <em>Kuala Lumpur + Langkawi</em>
+      </h1>
+      <div class="hero-meta">
+        <span>10 Jours / 9 Nuits</span><div class="hm-sep"></div>
+        <span>D'Algérie</span><div class="hm-sep"></div>
+        <span>Qatar Airways</span><div class="hm-sep"></div>
+        <span>Tours Petronas</span><div class="hm-sep"></div>
+        <span>Plage Langkawi</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hr-label">À partir de</div>
+      <div class="hr-price">379 000 <span class="hr-da">DA</span></div>
+      <div style="font-size:12px;color:var(--sub);margin-bottom:6px;">/ adulte · chambre double</div>
+      <div class="hr-promo">🏝️ Langkawi 5 nuits sur la mer</div>
+      <button class="hr-btn" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">✈️ Je réserve ma place</button>
+      <a href="https://wa.me/213XXXXXXXXX" class="hr-wa">💬 WhatsApp</a>
+      <div class="hr-note">Rappel sous 24h · Aucun paiement requis</div>
+    </div>
+  </div>
+</div>
+
+<div class="dates-strip">
+  <div class="ds-label">3 dates Été 2026</div>
+  <div class="ds-dates">
+    <div class="ds-date active"><div><div class="ds-month">Août</div><div class="ds-day">02</div><div class="ds-year">2026</div></div></div>
+    <div class="ds-date"><div><div class="ds-month">Août</div><div class="ds-day">12</div><div class="ds-year">2026</div></div></div>
+    <div class="ds-date"><div><div class="ds-month">Août</div><div class="ds-day">15</div><div class="ds-year">2026</div></div></div>
+  </div>
+  <div class="ds-places"><div class="ds-dot"></div> <span>Places limitées</span></div>
+</div>
+
+<div class="includes">
+  <div class="inc-pill"><span>✈️ Vol</span> <span>Qatar Airways</span></div>
+  <div class="inc-pill feature"><span>🏝️ Langkawi</span> <span>5 nuits sur la plage</span></div>
+  <div class="inc-pill"><span>🏨 Hôtels</span> <span>The Face Style + Pelangi Beach</span></div>
+  <div class="inc-pill"><span>🗺️ 3 jours</span> <span>d'excursions avec guide</span></div>
+  <div class="inc-pill"><span>🏙️ Tours Petronas</span> <span>+ Bukit Bintang</span></div>
+  <div class="inc-pill"><span>🛕 Batu Caves</span> <span>+ Genting Highlands</span></div>
+  <div class="inc-pill"><span>🚐 Transferts</span> <span>aéroport ↔ hôtels</span></div>
+  <div class="inc-pill"><span>👨‍💼 Guide</span> <span>local + assistant algérien</span></div>
+</div>
+
+<!-- LANGKAWI HIGHLIGHT - LE GROS ARGUMENT -->
+<section style="padding:60px 64px 0;">
+  <div class="container">
+    <div class="doha-highlight">
+      <div class="doha-icon">🏝️</div>
+      <div class="doha-text">
+        <div class="doha-title">Exclusivité VoyaDZ</div>
+        <div class="doha-name">5 nuits à <em>Langkawi · plage paradisiaque</em></div>
+        <div class="doha-desc">L'une des plus belles îles d'Asie du Sud-Est. Cinq nuits au Pelangi Beach Resort sur la plage de Cenang : sable blanc, lagons turquoise, jungle tropicale et couchers de soleil légendaires. Le parfait équilibre entre la modernité électrisante de Kuala Lumpur et la détente absolue sur la mer.</div>
+      </div>
+      <div class="doha-badge">★ Inclus dans le prix</div>
+    </div>
+  </div>
+</section>
+
+<section class="circuit-section">
+  <div class="container">
+    <div class="sec-label">Votre itinéraire</div>
+    <h2 class="sec-h">9 nuits, entre<br><em>buildings et plage</em></h2>
+    <p class="sec-sub">Deux étapes pour vivre la Malaisie comme jamais : la capitale ultra-moderne Kuala Lumpur avec ses Tours Petronas, Batu Caves et Genting Highlands, puis la détente absolue sur les plages paradisiaques de Langkawi.</p>
+
+    <div>
+      <div class="stop">
+        <div class="stop-left"><div class="stop-num">1</div><div class="stop-nights">4<br>nuits</div></div>
+        <div class="stop-right">
+          <div class="stop-img si-kl"><div class="stop-badge">Étape 1 · Capitale</div></div>
+          <div class="stop-info">
+            <div class="stop-city">Centre · Modernité</div>
+            <div class="stop-name">Kuala Lumpur</div>
+            <div class="stop-desc">La capitale ultra-moderne de la Malaisie, célèbre pour ses Tours Petronas, son palais royal et son patrimoine multiculturel. Trois jours d'excursions guidées : Bukit Bintang et marchés de nuit, city tour (Palais Royal, mosquée Negara, Tours jumelles, Pont Saloma), temple hindou Batu Caves et Genting Highlands en téléphérique panoramique.</div>
+            <div class="stop-tags">
+              <span class="stag">🏯 Tours Petronas</span>
+              <span class="stag">🌃 Bukit Bintang · marché nuit</span>
+              <span class="stag">🛕 Batu Caves</span>
+              <span class="stag">🚡 Genting Highlands</span>
+              <span class="stag">🏨 The Face Style</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-left"><div class="stop-num highlight">2</div><div class="stop-nights" style="color:var(--amber);">5<br>nuits ⭐</div></div>
+        <div class="stop-right">
+          <div class="stop-img si-langkawi"><div class="stop-badge featured">Étape 2 · Plage paradisiaque</div></div>
+          <div class="stop-info">
+            <div class="stop-city">Île · Détente tropicale</div>
+            <div class="stop-name">Langkawi</div>
+            <div class="stop-desc">L'une des plus belles îles d'Asie du Sud-Est. Cinq nuits au Pelangi Beach Resort, sur la plage de Cenang. Sable blanc, lagons turquoise, jungle tropicale et coucher de soleil légendaire. Possibilité d'excursions extra : téléphérique Langkawi Sky Bridge, mangrove, plongée. Au retour vers Alger, visite de Putra Jaya, la cité administrative futuriste.</div>
+            <div class="stop-tags">
+              <span class="stag">🏖️ Plage de Cenang</span>
+              <span class="stag">🌊 Lagons turquoise</span>
+              <span class="stag">🌅 Coucher de soleil</span>
+              <span class="stag">🕌 Putra Jaya (retour)</span>
+              <span class="stag">🏨 Pelangi Beach Resort</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hotels-section">
+  <div class="container">
+    <div class="sec-label">Hébergements</div>
+    <h2 class="sec-h">2 établissements<br><em>soigneusement sélectionnés</em></h2>
+    <p class="sec-sub" style="margin-bottom:36px;">Un hôtel design à Kuala Lumpur avec piscine à débordement et vue sur les Tours Petronas, puis un resort de rêve sur la plage de Cenang à Langkawi.</p>
+    <div class="hotels-grid">
+      <div class="hotel"><div class="hotel-img h1"><div class="hotel-stars-badge">★★★★</div></div><div class="hotel-body"><div class="hotel-city">Kuala Lumpur · Centre</div><div class="hotel-name">The Face Style</div><div class="hotel-nights">4 nuits · Piscine à débordement vue Petronas</div></div></div>
+      <div class="hotel"><div class="hotel-img h2"><div class="hotel-special">⭐ Resort plage</div><div class="hotel-stars-badge">★★★★★</div></div><div class="hotel-body"><div class="hotel-city">Langkawi · Plage Cenang</div><div class="hotel-name">Pelangi Beach Resort</div><div class="hotel-nights">5 nuits · Bungalows + plage privée</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifs-section">
+  <div class="container">
+    <div class="sec-label">Tarifs détaillés</div>
+    <h2 class="sec-h">Le bon prix<br><em>selon votre formule</em></h2>
+    <p class="sec-sub">Tarifs en DA · Vol Qatar Airways + 2 hôtels (KL + Langkawi) + 3 jours d'excursions guidées + transferts inclus.</p>
+
+    <div class="tarifs-wrap">
+      <table class="tarifs-table">
+        <thead>
+          <tr>
+            <th>Date départ</th>
+            <th>Double/Triple</th>
+            <th>Single</th>
+            <th>Enf. avec lit (-12 ans)</th>
+            <th>Enf. sans lit (-12 ans)</th>
+            <th>Bébé (-2 ans)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>02/08 → 12/08</td><td><span class="tarif-price">379 000</span></td><td>519 000</td><td>369 000</td><td>239 000</td><td>39 000</td></tr>
+          <tr><td>12/08 → 22/08</td><td><span class="tarif-price">379 000</span></td><td>519 000</td><td>369 000</td><td>239 000</td><td>39 000</td></tr>
+          <tr><td>15/08 → 25/08</td><td><span class="tarif-price">379 000</span></td><td>519 000</td><td>369 000</td><td>239 000</td><td>39 000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="programme-section">
+  <div class="container">
+    <div class="sec-label">Programme jour par jour</div>
+    <h2 class="sec-h">10 jours,<br><em>parfaitement orchestrés</em></h2>
+    <p class="sec-sub">Cliquez sur un jour pour voir le programme détaillé.</p>
+
+    <div class="prog-list">
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">01</div><div class="prog-day-lbl">Vol</div></div>
+          <div class="prog-title">Arrivée à Kuala Lumpur<div class="prog-city">Vol Alger → Doha → KL</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Vol Qatar Airways d'Algérie avec escale à Doha</li>
+            <li>Arrivée à l'aéroport de Kuala Lumpur</li>
+            <li>Transfert privé de l'aéroport à l'hôtel</li>
+            <li>Installation au The Face Style</li>
+            <li>Visite guidée en soirée de Bukit Bintang</li>
+            <li>Découverte des marchés de nuit</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day special"><div class="prog-day-num">02</div><div class="prog-day-lbl">City ★</div></div>
+          <div class="prog-title">City Tour Kuala Lumpur<div class="prog-city">Tours Petronas · Palais Royal</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>City tour : visite du Palais Royal</li>
+            <li>Mosquée de Negara</li>
+            <li>Les emblématiques Tours Petronas Jumelles</li>
+            <li>Le Pont de Saloma</li>
+            <li>Retour à l'hôtel · Dîner libre</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day special"><div class="prog-day-num">03</div><div class="prog-day-lbl">Excursion</div></div>
+          <div class="prog-title">Batu Caves & Genting Highlands<div class="prog-city">Temples + téléphérique</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Visite du temple hindou des grottes Batu Caves</li>
+            <li>Visite du temple Chin Swee à Genting Highlands</li>
+            <li>Téléphérique panoramique</li>
+            <li>Découverte du resort & casino de Genting</li>
+            <li>Retour à l'hôtel · Dîner libre</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">04</div><div class="prog-day-lbl">Vol</div></div>
+          <div class="prog-title">KL → Langkawi<div class="prog-city">Vol domestique</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Check-out de l'hôtel The Face Style</li>
+            <li>Transfert vers l'aéroport de KL</li>
+            <li>Vol domestique pour Langkawi</li>
+            <li>Check-in au Pelangi Beach Resort</li>
+            <li>Première soirée en bord de mer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">05</div><div class="prog-day-lbl">Plage</div></div>
+          <div class="prog-title">Langkawi · Journée libre<div class="prog-city">Détente bord de mer</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Journée complètement libre</li>
+            <li>Plage de Cenang à 2 pas du resort</li>
+            <li>Activités extras possibles : Sky Bridge, mangrove, plongée</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">06</div><div class="prog-day-lbl">Plage</div></div>
+          <div class="prog-title">Langkawi · Activités plage<div class="prog-city">Sable blanc & lagons</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Activités à la plage</li>
+            <li>Sports nautiques disponibles</li>
+            <li>Massages et spa au resort</li>
+            <li>Coucher de soleil légendaire</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">07</div><div class="prog-day-lbl">Plage</div></div>
+          <div class="prog-title">Langkawi · Journée libre<div class="prog-city">Détente continue</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Journée libre</li>
+            <li>Possibilité d'excursions extra : croisière coucher de soleil, île aux singes</li>
+            <li>Shopping duty-free (Langkawi est zone franche)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">08</div><div class="prog-day-lbl">Vol</div></div>
+          <div class="prog-title">Langkawi → Kuala Lumpur<div class="prog-city">Retour capitale</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Check-out du Pelangi Beach Resort</li>
+            <li>Transfert vers l'aéroport de Langkawi</li>
+            <li>Vol vers Kuala Lumpur</li>
+            <li>Check-in à l'hôtel KL</li>
+            <li>Soirée libre · Shopping ou détente</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day"><div class="prog-day-num">09</div><div class="prog-day-lbl">Libre</div></div>
+          <div class="prog-title">Kuala Lumpur · Journée libre<div class="prog-city">Shopping & exploration</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Journée libre à Kuala Lumpur</li>
+            <li>Shopping dans les grands malls : Pavilion, Suria KLCC</li>
+            <li>Visite optionnelle : KL Tower, Chinatown, Petaling Street</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-item">
+        <div class="prog-head" onclick="toggleProg(this)">
+          <div class="prog-day special"><div class="prog-day-num">10</div><div class="prog-day-lbl">Retour ★</div></div>
+          <div class="prog-title">Putra Jaya + Retour Alger<div class="prog-city">Visite finale + vol</div></div>
+          <div class="prog-arrow">▾</div>
+        </div>
+        <div class="prog-body">
+          <ul>
+            <li>Petit-déjeuner à l'hôtel</li>
+            <li>Check-out de l'hôtel KL</li>
+            <li>Visite de Putra Jaya, la cité administrative futuriste</li>
+            <li>Mosquée rose et palais du gouvernement</li>
+            <li>Transfert vers l'aéroport de KL</li>
+            <li>Vol retour Qatar Airways via Doha vers Alger</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="flight-section">
+  <div class="container">
+    <div class="sec-label">Plan de vol Qatar Airways</div>
+    <h2 class="sec-h">Vols inclus<br><em>via Doha</em></h2>
+    <p class="sec-sub">Tous les départs Qatar Airways d'Algérie avec escale à Doha vers Kuala Lumpur (Malaisie).</p>
+
+    <div class="flight-grid">
+      <div class="flight-card">
+        <div class="flight-date">Du 02/08 au 12/08</div>
+        <div class="flight-duration">9 nuitées · 10 jours</div>
+        <div class="flight-leg"><span class="flight-num">QR1380</span><span class="flight-route">ALG → DOH</span><span class="flight-time">15:35 → 23:35</span></div>
+        <div class="flight-leg"><span class="flight-num">QR852</span><span class="flight-route">DOH → KUL</span><span class="flight-time">02:35 → 15:10</span></div>
+        <div class="flight-leg"><span class="flight-num">QR853</span><span class="flight-route">KUL → DOH</span><span class="flight-time">20:20 → 22:25</span></div>
+        <div class="flight-leg"><span class="flight-num">QR1379</span><span class="flight-route">DOH → ALG</span><span class="flight-time">08:50 → 13:15</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-date">Du 12/08 au 22/08</div>
+        <div class="flight-duration">9 nuitées · 10 jours</div>
+        <div class="flight-leg"><span class="flight-num">QR1380</span><span class="flight-route">ALG → DOH</span><span class="flight-time">15:35 → 23:35</span></div>
+        <div class="flight-leg"><span class="flight-num">QR852</span><span class="flight-route">DOH → KUL</span><span class="flight-time">02:35 → 15:10</span></div>
+        <div class="flight-leg"><span class="flight-num">QR853</span><span class="flight-route">KUL → DOH</span><span class="flight-time">20:20 → 22:25</span></div>
+        <div class="flight-leg"><span class="flight-num">QR1379</span><span class="flight-route">DOH → ALG</span><span class="flight-time">08:50 → 13:15</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-date">Du 15/08 au 25/08</div>
+        <div class="flight-duration">9 nuitées · 10 jours</div>
+        <div class="flight-leg"><span class="flight-num">QR1380</span><span class="flight-route">ALG → DOH</span><span class="flight-time">15:35 → 23:35</span></div>
+        <div class="flight-leg"><span class="flight-num">QR852</span><span class="flight-route">DOH → KUL</span><span class="flight-time">02:35 → 15:10</span></div>
+        <div class="flight-leg"><span class="flight-num">QR853</span><span class="flight-route">KUL → DOH</span><span class="flight-time">20:20 → 22:25</span></div>
+        <div class="flight-leg"><span class="flight-num">QR1379</span><span class="flight-route">DOH → ALG</span><span class="flight-time">08:50 → 13:15</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inclus-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="sec-label" style="justify-content:center;">Tout inclus</div>
+      <h2 class="sec-h" style="text-align:center;">Contenu du<br><em>voyage</em></h2>
+    </div>
+    <div class="inclus-grid">
+      <div class="inc-card"><span class="inc-icon">✈️</span><div class="inc-title">Qatar Airways</div><div class="inc-desc">Vols A/R Alger ↔ Doha ↔ Kuala Lumpur en classe économique</div></div>
+      <div class="inc-card feature"><span class="inc-icon">🏝️</span><div class="inc-title">Île de Langkawi</div><div class="inc-desc">5 jours détente sur la plage de Cenang au Pelangi Beach Resort</div></div>
+      <div class="inc-card"><span class="inc-icon">🏨</span><div class="inc-title">Hébergement</div><div class="inc-desc">The Face Style (KL) + Pelangi Beach Resort (Langkawi)</div></div>
+      <div class="inc-card"><span class="inc-icon">🗺️</span><div class="inc-title">3 jours d'excursions</div><div class="inc-desc">City tour + Batu Caves + Genting + Putra Jaya</div></div>
+      <div class="inc-card"><span class="inc-icon">🏯</span><div class="inc-title">Tours Petronas</div><div class="inc-desc">Visite des emblématiques tours jumelles de KL</div></div>
+      <div class="inc-card"><span class="inc-icon">🚐</span><div class="inc-title">Transferts</div><div class="inc-desc">Aéroport ↔ hôtels + vol domestique KL ↔ Langkawi</div></div>
+      <div class="inc-card"><span class="inc-icon">🍽️</span><div class="inc-title">Petits-déjeuners</div><div class="inc-desc">Inclus dans tous les hôtels du séjour</div></div>
+      <div class="inc-card"><span class="inc-icon">👨‍💼</span><div class="inc-title">Guide</div><div class="inc-desc">Guide local + assistant algérien</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="demande">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="form-left">
+        <div class="sec-label">Réservation</div>
+        <h2>Réservez votre<br><em>place maintenant</em></h2>
+        <p>Places limitées sur les 3 départs. Un conseiller VoyaDZ vous contacte sur WhatsApp sous 24h. Aucun paiement en ligne requis.</p>
+        <div class="urgency-box">
+          <div style="font-size:20px;flex-shrink:0;">💎</div>
+          <div><div class="urg-title">Le voyage le plus accessible de notre catalogue</div><div class="urg-sub">À partir de 379 000 DA tout inclus</div></div>
+        </div>
+        <ul class="promise-list">
+          <li class="promise-item"><div class="promise-check">✓</div><span>Réponse garantie sous 24h</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>Aucun paiement en ligne</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>Vol Qatar Airways d'Algérie</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>5 jours détente à Langkawi</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>3 jours d'excursions à KL</span></li>
+          <li class="promise-item"><div class="promise-check">✓</div><span>Vol domestique KL ↔ Langkawi inclus</span></li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <div class="fc-top">
+          <div class="fc-top-title">Malaisie Summer 2026</div>
+          <div class="fc-top-sub">10 jours · 9 nuits · Qatar Airways · D'Algérie</div>
+        </div>
+        <div class="fc-body">
+          <form name="reservation-malaisie" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field" id="formContent" onsubmit="return handleSubmit(event)">
+            <input type="hidden" name="form-name" value="reservation-malaisie">
+            <input type="hidden" name="produit" value="Malaisie Summer 2026">
+            <input type="hidden" name="reference" id="f-ref">
+            <p class="hidden" style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+            <div class="f-grid">
+              <div class="field"><label class="f-label">Prénom <span class="f-req">*</span></label><input class="f-input" id="f-prenom" name="prenom" type="text" placeholder="Mohamed" required><div class="f-error" id="fe-prenom">Champ requis</div></div>
+              <div class="field"><label class="f-label">Nom <span class="f-req">*</span></label><input class="f-input" id="f-nom" name="nom" type="text" placeholder="Benali" required><div class="f-error" id="fe-nom">Champ requis</div></div>
+            </div>
+            <div class="field"><label class="f-label">WhatsApp <span class="f-req">*</span></label><input class="f-input" id="f-wa" name="whatsapp" type="tel" placeholder="0661 234 567" required><div class="f-error" id="fe-wa">Numéro invalide</div></div>
+            <div class="field">
+              <label class="f-label">Date de départ <span class="f-req">*</span></label>
+              <div class="date-chips">
+                <div class="dc" onclick="pickDate(this,'2 Août 2026')">2 Août</div>
+                <div class="dc" onclick="pickDate(this,'12 Août 2026')">12 Août</div>
+                <div class="dc" onclick="pickDate(this,'15 Août 2026')">15 Août</div>
+              </div>
+              <input type="hidden" id="f-date" name="date_depart">
+              <div class="f-error" id="fe-date">Veuillez choisir une date</div>
+            </div>
+            <div class="field"><label class="f-label">Type de chambre <span class="f-req">*</span></label><select class="f-input" id="f-room" name="chambre" required><option value="">Sélectionner...</option><option>Chambre double/triple (379 000 DA)</option><option>Chambre single (519 000 DA)</option><option>Avec enfant -12 ans avec lit (369 000 DA/enf)</option><option>Avec enfant -12 ans sans lit (239 000 DA/enf)</option><option>Avec bébé -2 ans (39 000 DA)</option></select><div class="f-error" id="fe-room">Veuillez sélectionner</div></div>
+            <div class="field"><label class="f-label">Nombre de personnes <span class="f-req">*</span></label><select class="f-input" id="f-pers" name="personnes" required><option value="">Sélectionner...</option><option>1 personne</option><option>2 personnes</option><option>3 personnes</option><option>4 personnes</option><option>Groupe 5+</option></select><div class="f-error" id="fe-pers">Veuillez sélectionner</div></div>
+            <div class="field"><label class="f-label">Questions / Précisions</label><textarea class="f-input" id="f-msg" name="message" rows="3" placeholder="Ex : voyage de noces, voyage en famille, préférences..."></textarea></div>
+            <button class="btn-submit" id="submitBtn" type="submit">🏝️ Confirmer ma demande</button>
+            <p class="f-note">Un conseiller vous rappelle sous 24h · Gratuit · Sans engagement</p>
+          </form>
+          <div class="success-box" id="successBox">
+            <div class="sb-icon">✓</div>
+            <h3 class="sb-title">Demande envoyée !</h3>
+            <p class="sb-sub">Notre conseiller vous contacte sur WhatsApp dans les 24h pour votre voyage Malaisie.</p>
+            <a href="#" class="sb-wa" id="sbWa">💬 Écrire sur WhatsApp</a>
+            <div class="sb-ref" id="sbRef"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Voya<span>DZ</span> · <span style="color:rgba(255,255,255,0.5);font-weight:400;">Voyages organisés d'Algérie</span> 🇩🇿</div>
+  <p>© 2026 VoyaDZ · Tous droits réservés</p>
+  <div style="display:flex;gap:16px;"><a href="index.html">Accueil</a><a href="index.html#asie">Asie</a><a href="https://wa.me/213XXXXXXXXX">WhatsApp</a></div>
+</footer>
+
+<div class="sticky-bar">
+  <div><div class="sb-product">Malaisie Summer 2026 · 10J/9N · KL + Langkawi</div><div class="sb-price">379 000 DA <span>· tout inclus</span></div></div>
+  <div class="sb-right"><a href="https://wa.me/213XXXXXXXXX" class="sb-wa-btn">💬 WhatsApp</a><a href="#demande" class="sb-main-btn">🏝️ Réserver</a></div>
+</div>
+
+<script>
+const WA='213XXXXXXXXX';
+let selectedDate='';
+
+function genRef(){
+  const d=new Date();
+  return 'MLY-'+String(d.getDate()).padStart(2,'0')+String(d.getMonth()+1).padStart(2,'0')+'-'+(Math.floor(Math.random()*9000)+1000);
+}
+
+function pickDate(el,val){
+  document.querySelectorAll('.dc').forEach(d=>d.classList.remove('sel'));
+  el.classList.add('sel');
+  selectedDate=val;
+  document.getElementById('f-date').value=val;
+  document.getElementById('fe-date').classList.remove('show');
+}
+
+document.querySelectorAll('.ds-date').forEach(d=>d.addEventListener('click',()=>{
+  document.querySelectorAll('.ds-date').forEach(x=>x.classList.remove('active'));
+  d.classList.add('active');
+}));
+
+function toggleProg(el){
+  el.parentElement.classList.toggle('open');
+}
+
+function validate(){
+  let ok=true;
+  [
+    {id:'f-prenom',fn:v=>v.trim().length>=2},
+    {id:'f-nom',fn:v=>v.trim().length>=2},
+    {id:'f-wa',fn:v=>/^0[5-7]\d{8}$/.test(v.replace(/\s/g,''))},
+    {id:'f-room',fn:v=>v!==''},
+    {id:'f-pers',fn:v=>v!==''}
+  ].forEach(c=>{
+    const el=document.getElementById(c.id);
+    const err=document.getElementById('fe-'+c.id.replace('f-',''));
+    const v=c.fn(el.value);
+    el.classList.toggle('err',!v);
+    err&&err.classList.toggle('show',!v);
+    if(!v)ok=false;
+  });
+  if(!selectedDate){
+    document.getElementById('fe-date').classList.add('show');
+    ok=false;
+  }
+  return ok;
+}
+
+function encode(data){
+  return Object.keys(data).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
+}
+
+async function handleSubmit(event){
+  event.preventDefault();
+  if(!validate())return false;
+
+  const btn=document.getElementById('submitBtn');
+  btn.disabled=true;
+  btn.textContent='Envoi en cours...';
+
+  const ref=genRef();
+  document.getElementById('f-ref').value=ref;
+
+  const form=event.target;
+  const formData=new FormData(form);
+  const data={};
+  formData.forEach((v,k)=>{data[k]=v;});
+
+  // Affiche la confirmation immédiate avec WhatsApp
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('successBox').classList.add('show');
+  document.getElementById('sbRef').textContent='Référence : '+ref;
+  const msg=encodeURIComponent('Salam ! Demande Malaisie Summer 2026.\nRef : '+ref+'\nDépart : '+selectedDate+'\nPersonnes : '+data.personnes);
+  document.getElementById('sbWa').href='https://wa.me/'+WA+'?text='+msg;
+
+  // Envoi vers Netlify Forms en arrière-plan
+  try{
+    await fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:encode(data)
+    });
+  }catch(e){
+    console.error('Erreur envoi:',e);
+  }
+
+  return false;
+}
+
+['f-prenom','f-nom','f-wa','f-room','f-pers'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el)el.addEventListener('input',()=>{
+    el.classList.remove('err');
+    const err=document.getElementById('fe-'+id.replace('f-',''));
+    if(err)err.classList.remove('show');
+  });
+});
+
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow=window.scrollY>10?'0 4px 20px rgba(15,35,71,0.08)':'none';
+});
+</script>
+</body>
+</html>
