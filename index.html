@@ -57,7 +57,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .btn-hero-secondary:hover{background:rgba(255,255,255,0.15);}
 
 /* Hero card right */
-.hero-card{background:white;border-radius:20px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,0.3);position:relative;}
+.hero-card{background:white;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,0.3);position:relative;overflow:hidden;}
+.hc-image{height:180px;background:url('images/vietnam-card.jpg') center/cover no-repeat,linear-gradient(135deg,#0F766E 0%,#134E4A 50%,#022C22 100%);position:relative;}
+.hc-image::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(15,35,71,0.6) 100%);}
+.hc-image-flag{position:absolute;bottom:14px;left:20px;font-size:42px;z-index:2;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.4));}
+.hc-content{padding:24px 32px 32px;}
 .hero-card::before{content:'';position:absolute;top:-12px;right:24px;background:var(--amber);color:var(--navy);font-size:11px;font-weight:800;padding:6px 14px;border-radius:20px;letter-spacing:1px;}
 .hero-card.featured::before{content:'⭐ DISPONIBLE MAINTENANT';}
 .hc-flag{font-size:48px;margin-bottom:8px;}
@@ -308,24 +312,28 @@ footer{background:var(--ink);color:white;padding:60px 64px 40px;}
     </div>
 
     <div class="hero-card featured">
-      <div class="hc-flag">🇻🇳</div>
-      <div class="hc-country">Asie · Été 2026</div>
-      <div class="hc-name">Vietnam Summer 2026</div>
-      <div class="hc-desc">12 jours du Sud au Nord · Qatar Airways · 5 hôtels · Croisière Aqua Luxury</div>
-      <div class="hc-features">
-        <div class="hc-feat"><span class="hc-feat-icon">✈️</span> Qatar Airways</div>
-        <div class="hc-feat"><span class="hc-feat-icon">🏨</span> 5 hôtels 4★/5★</div>
-        <div class="hc-feat"><span class="hc-feat-icon">🛂</span> Visa inclus</div>
-        <div class="hc-feat"><span class="hc-feat-icon">🚢</span> Croisière Halong</div>
+      <div class="hc-image">
+        <div class="hc-image-flag">🇻🇳</div>
       </div>
-      <div class="hc-price-row">
-        <div>
-          <div class="hc-price-label">À partir de</div>
-          <div class="hc-price">449 000 <small>DA</small></div>
+      <div class="hc-content">
+        <div class="hc-country">Asie · Été 2026</div>
+        <div class="hc-name">Vietnam Summer 2026</div>
+        <div class="hc-desc">12 jours du Sud au Nord · Qatar Airways · 5 hôtels · Croisière Aqua Luxury</div>
+        <div class="hc-features">
+          <div class="hc-feat"><span class="hc-feat-icon">✈️</span> Qatar Airways</div>
+          <div class="hc-feat"><span class="hc-feat-icon">🏨</span> 5 hôtels 4★/5★</div>
+          <div class="hc-feat"><span class="hc-feat-icon">🛂</span> Visa inclus</div>
+          <div class="hc-feat"><span class="hc-feat-icon">🚢</span> Croisière Halong</div>
         </div>
-        <div class="hc-promo">⚡ Promo 30/08<br>439K DA</div>
+        <div class="hc-price-row">
+          <div>
+            <div class="hc-price-label">À partir de</div>
+            <div class="hc-price">449 000 <small>DA</small></div>
+          </div>
+          <div class="hc-promo">⚡ Promo 30/08<br>439K DA</div>
+        </div>
+        <a href="vietnam.html" class="hc-btn">Voir le voyage →</a>
       </div>
-      <a href="vietnam.html" class="hc-btn">Voir le voyage →</a>
     </div>
   </div>
 </div>
